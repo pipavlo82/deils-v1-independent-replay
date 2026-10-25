@@ -12,8 +12,8 @@
   "archive_name": "deils-v1-independent-live-replay-2026-10-25-v1.0.0.zip",
   "archive_sha256": "b3544b46e8fce3c1015150ecd49557c355d37469f358d7fef281cb9c050d7f4e",
   "original_evidence_bytes_changed": false,
-  "wrapper_readme_sha256": "182248ad9d6f0a9563d3f9391406ff42c44fe5ad630271a50e62f598dfe1cab5",
-  "echo_review": "Echo independently checked selected cryptographic and withholding properties of the same two live fixtures using his own implementation, and reviewed Pavlo's reported results. Echo did not independently execute Pavlo's full live replay or the 16 local adversarial controls.",
+  "wrapper_readme_sha256": "a72bf37f3cda98de476ca0ca9acc3fc593f7b70805ed769a0714fd6f8f9da935",
+  "echo_review": "Echo independently confirmed the two-fixture PASS using his own verifier, checking both signed records, ledger-16 bind and ledger-17 withholding. He subsequently cold-replayed the public evidence at 58be70b420aaa223611d92702b4624b751d4f08d. The three private-input controls remain author-only; he did not rerun all 16 controls or repeat Pavlo's live reveal request sequence.",
   "public_replay": {
     "signed_records": 2,
     "bip340_vectors": 19,
@@ -22,13 +22,23 @@
   },
   "new_live_deils_requests": 0,
   "private_deployment_mapping": "Snapshot of deployed descriptions, mapping per invinoveritas.",
-  "echo_did_not_verify": [
-    "Pavlo full live replay",
-    "Pavlo 16 local adversarial controls",
-    "141-entry hash manifest",
-    "public offline replay"
-  ],
   "attribution_erratum": "errata/attribution-v1-2026-10-25.md",
   "attribution_erratum_version": 1,
-  "attribution_erratum_sha256": "715522a40fb7929cc32c4ef31ca47f85422b5a16bf3f19616bbb65fc589846e0"
+  "attribution_erratum_sha256": "2814eae09516c6043a5e9b190aa7aae2350ebd68ae15a392de615039db23e0b8",
+  "echo_independent_public_replay": {
+    "basis": "Echo final working-group report directly read; raw reviewer logs not bundled",
+    "commit": "58be70b420aaa223611d92702b4624b751d4f08d",
+    "release_zip_hash_and_identity": true,
+    "integrity_entries": 141,
+    "public_controls": 13,
+    "bip340_vectors": 19,
+    "signed_records": 2,
+    "modes": [
+      "normal",
+      "python -O"
+    ],
+    "signature_bit_mutation": "integrity refusal and replay ORIGINAL_RECORD refusal",
+    "private_controls": "author-only; not independently replayed"
+  },
+  "attribution_erratum_status": "WITHDRAWN_BY_REVIEWER; original attribution accurate; later public cold replay recorded"
 }

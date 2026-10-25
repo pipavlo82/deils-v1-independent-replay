@@ -1,42 +1,44 @@
-# Attribution erratum v1 — 2026-10-25
+# Attribution clarification — erratum v1 withdrawn (2026-10-25)
 
-Applies to the editable publication documentation and release description for
-DEILS independent replay evidence **v1.0.0**, originally published at
-`58be70b420aaa223611d92702b4624b751d4f08d`.
+The attribution correction published at
+`e0131fabfd5309da08b305aac5d5f819bc37a4fc` has been **withdrawn by Echo**.
+It followed an earlier working-group message that Echo subsequently superseded.
+His final clarification: "Keep your original wording. It's accurate."
 
-Author of the replay: **Pavlo Tvardovskyi (`pipavlo82`)**.
+The original publication's statement that Echo independently confirmed the
+two-fixture PASS with his own verifier is accurate. He independently checked
+both signed records (BIP-340, event IDs and bindings), the ledger-16 bind and
+ledger-17 withholding fix. This does not mean he repeated Pavlo's live reveal
+request sequence or all 16 local controls.
 
-## Correction
+## Subsequent independent public replay
 
-The original root README, `PUBLICATION.json` and release description summarized
-Echo's work too broadly as confirmation of the two-fixture PASS. That wording
-must not be read as an independent execution of Pavlo's entire replay.
+Echo also reported a cold replay of the public evidence at original commit
+`58be70b420aaa223611d92702b4624b751d4f08d`:
 
-Echo independently checked selected cryptographic and withholding properties of the same two live fixtures using his own implementation, and reviewed Pavlo's reported results. Echo did not independently execute Pavlo's full live replay or the 16 local adversarial controls.
+- Release ZIP hash, 552,285-byte size and byte identity with the committed pack.
+- 141/141 integrity hashes and exact inventory.
+- 13/13 public adversarial controls and 19/19 BIP-340 vectors.
+- Two signed records matching his earlier live API observations.
+- Normal and Python `-O` offline replay, JCS and event-ID checks.
+- A flipped signature bit in a local copy rejected by integrity and independently
+  by replay at `ORIGINAL_RECORD`.
 
-Echo did not verify the 141-entry hash manifest or run the public offline replay.
-His selected-property checks and review of Pavlo's report do not independently
-establish execution of Pavlo's full procedure, all 16 controls, or its 13-control
-public subset.
+These are Echo's reported independent executions, directly read in the
+Trustless AI working-group discussion on 2026-10-25. His raw replay logs are not
+bundled. The earlier statements that he had not run the public replay or
+verified the 141-entry manifest are superseded by this later execution.
 
-Pavlo executed the two-fixture live replay and the 16 local adversarial controls.
-The public package reproduces 13 controls. Three content-dependent controls need
-separately authorized private inputs and remain `NOT_REPLAYED` in public mode.
-No such private inputs are published.
+Pavlo Tvardovskyi (`pipavlo82`) remains author and executor of the full historical
+live replay and 16 local controls. **Three private-input controls remain
+author-only.** They are `NOT_REPLAYED` without the excluded private content.
 
-This correction follows Echo's clarification in the Trustless AI working-group
-discussion on 2026-10-25. His earlier descriptions of separately implemented
-cryptographic and withholding checks are distinguished from his review of the
-complete report. Neither is presented as a rerun of Pavlo's complete replay.
+## Evidence unchanged
 
-## Immutable evidence boundary
-
-This is **attribution erratum v1**, not a new evidence release. The original
-142 evidence files, their `SHA256SUMS`, the original commit, tag `v1.0.0`, and
-the release ZIP remain unchanged. Historical tagged publication wording remains
-readable; this erratum supersedes its broad attribution. No correction to the
-frozen evidence files is needed: those files do not claim Echo replayed the
-complete fixtures or controls.
+This clarification changes publication documentation only. It is not a new
+evidence release. The original 142 evidence files, `SHA256SUMS`, commit,
+tag `v1.0.0` and ZIP asset are unchanged. The intermediate correction remains
+in ordinary Git history; no history or tag is rewritten.
 
 Original ZIP SHA-256:
 
@@ -44,7 +46,7 @@ Original ZIP SHA-256:
 b3544b46e8fce3c1015150ecd49557c355d37469f358d7fef281cb9c050d7f4e
 ```
 
-The fixture states remain historical observations, not immutable conformance
-vectors. Production-wide security, all customer records, OTS/PQ anchoring,
-external execution, general agent authorization and full security certification
-remain NOT_COVERED. No new DEILS service requests were made for this correction.
+Fixture states are historical observations, not frozen conformance vectors.
+Production-wide security, all customer records, OTS/PQ anchoring, external
+execution, general agent authorization and full certification remain NOT_COVERED.
+No new DEILS service requests or private-input publication accompanies this update.

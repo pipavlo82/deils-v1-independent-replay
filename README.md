@@ -36,20 +36,37 @@ The public offline replay needs no confidential inputs or network access. It ver
 
 Tiago authorized this public destination through Pavlo's publication instructions. Statements such as “LOCAL ONLY / UNPUBLISHED” and “awaiting Tiago” inside the pinned pack describe its earlier packaging state. They remain unchanged as historical evidence; this separate wrapper records the authorized publication.
 
-Echo independently checked selected cryptographic and withholding properties of the same two live fixtures using his own implementation, and reviewed Pavlo's reported results. Echo did not independently execute Pavlo's full live replay or the 16 local adversarial controls.
+**Echo independently confirmed the two-fixture PASS using his own verifier.**
+He checked both signed records, their NIP-01 IDs/BIP-340 signatures and bindings,
+the ledger-16 commitment bind, and the ledger-17 withholding fix. This is distinct
+from repeating Pavlo's live reveal request sequence.
 
-Echo did not verify this package's 141-entry hash manifest or execute its offline replay. His separately implemented checks of selected properties and his review of Pavlo's report are distinct from Pavlo's complete replay. See the [versioned attribution erratum](errata/attribution-v1-2026-10-25.md), which also applies to the historical publication wording at tag `v1.0.0`.
+Echo subsequently cold-replayed the public pack at
+`58be70b420aaa223611d92702b4624b751d4f08d`: the ZIP hash and byte identity,
+141/141 integrity entries, 13/13 public controls, 19/19 BIP-340 vectors, both
+signed records, and normal/Python `-O` offline replay. He also reported that a
+flipped signature bit fails both integrity and replay (at `ORIGINAL_RECORD`).
+These are Echo's independently executed results, as reported in his working-group
+clarification; his raw replay logs are not included here.
+
+**The three private-input controls remain author-only.** Echo did not rerun all
+16 local controls. Their original execution is Pavlo's work; the public pack
+reproduces 13 and explicitly reports three as `NOT_REPLAYED` without private inputs.
+
+Echo withdrew his earlier attribution correction request: "Keep your original
+wording. It's accurate." The [attribution clarification](errata/attribution-v1-2026-10-25.md)
+marks the briefly published erratum as withdrawn. Ordinary commits retain that
+publication history; the original v1.0.0 evidence and tag have not changed.
 
 | Evidence activity | Attribution and reproducibility |
 |---|---|
-| Two-fixture live replay | Authored and executed by Pavlo Tvardovskyi. |
-| 16 local adversarial controls | Executed by Pavlo; these were local checks, not production attacks. |
-| 13 public controls | Reproducible offline from the sanitized package without confidential inputs. |
-| Three content-dependent controls | Historical Pavlo results; require private inputs and are `NOT_REPLAYED` in public mode. |
-| Selected cryptographic and withholding properties | Separately checked by Echo using his own implementation; not a full replay. |
-| Review of Pavlo's report | Echo reviewed the reported results; this is not execution of the report's full procedure. |
+| Two-fixture live replay and 16 local controls | Authored and executed by Pavlo Tvardovskyi. |
+| Signed records, ledger-16 bind and ledger-17 withholding | Independently checked by Echo using his own implementation. |
+| Public pack at `58be70b4` | Cold-replayed by Echo: 141 hashes, 13 public controls, 19 BIP-340 vectors, two signed records, normal and `-O`. |
+| Three content-dependent controls | Author-only historical results; require private inputs and are `NOT_REPLAYED` in public mode. |
 
-The original review transcript is not part of this package.
+The original review transcript and Echo's private replay environment are not part
+of this package. No broader independent acceptance is inferred.
 
 ## Public contract pin
 
