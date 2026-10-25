@@ -1,0 +1,22 @@
+{
+  "method": "POST",
+  "path": "/verify-proof",
+  "started_utc": "2026-10-25T15:56:33.914342+00:00",
+  "request_headers": {
+    "Accept": "application/json",
+    "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0",
+    "Content-Type": "application/json"
+  },
+  "request_body_sha256": "879fe805621bec66bc24aea2261e7df32ce7a3b934a4a9ff75559e59d25b86bc",
+  "status": 200,
+  "finished_utc": "2026-10-25T15:56:34.237629+00:00",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Sun, 25 Oct 2026 15:56:34 GMT",
+    "Content-Type": "application/json"
+  },
+  "raw_response_sha256": "48734452214b51d3f552e329c25dc81f18cc1c90d386cd5e706ee0af7f98104a",
+  "raw_response_bytes": 263,
+  "sanitized": true,
+  "state": "content_commitment_mismatch"
+}

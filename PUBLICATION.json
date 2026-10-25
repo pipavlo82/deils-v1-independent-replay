@@ -1,0 +1,25 @@
+{
+  "version": "v1.0.0",
+  "author": "Pavlo Tvardovskyi",
+  "github_author": "pipavlo82",
+  "repository": "https://github.com/pipavlo82/deils-v1-independent-replay",
+  "publication_authorization": "Tiago authorization conveyed explicitly by Pavlo; public destination specified in publication task",
+  "initial_remote_state": "Repository absent (authenticated owner lookup HTTP404); no existing commit",
+  "evidence_directory": "deils-v1-independent-live-replay-2026-10-25",
+  "evidence_files": 142,
+  "evidence_manifest_entries": 141,
+  "evidence_manifest_sha256": "120a16a4e3a04eb892773b67577b8dfa6eddc4f5b449db882663acb510c33437",
+  "archive_name": "deils-v1-independent-live-replay-2026-10-25-v1.0.0.zip",
+  "archive_sha256": "b3544b46e8fce3c1015150ecd49557c355d37469f358d7fef281cb9c050d7f4e",
+  "original_evidence_bytes_changed": false,
+  "wrapper_readme_sha256": "bf557cd11de9ed33104f7b0083365c1eae1746e9bdb836f8c32158460b3d06d3",
+  "echo_review": "Pavlo reports Echo independently confirmed the two-fixture PASS with his own verifier; no claim of replaying Pavlo's 16 controls",
+  "public_replay": {
+    "signed_records": 2,
+    "bip340_vectors": 19,
+    "public_controls": 13,
+    "private_input_controls_not_replayed": 3
+  },
+  "new_live_deils_requests": 0,
+  "private_deployment_mapping": "Snapshot of deployed descriptions, mapping per invinoveritas."
+}

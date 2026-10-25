@@ -1,0 +1,593 @@
+{
+  "author": "Pavlo Tvardovskyi (pipavlo82)",
+  "sources": [
+    {
+      "path": "sources/reveal-contract-2026-10-25.json",
+      "source": "deils-evidence-pack-build-20261025/public-contract.json",
+      "source_sha256": "e4629dec96ae78844515234d202eda560fd0734eaf4a67c04c494985170fde4c",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/public-contract-access.json",
+      "source": "deils-evidence-pack-build-20261025/public-access.json",
+      "source_sha256": "43b4cdd8c0b0b256d4cf0ea270b77c5d5153148f5988d44b2d4e755d487f8d0f",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/sources/governance-pubkey.json",
+      "source": "deils-live-privacy-bind-20261025/sources/governance-pubkey.json",
+      "source_sha256": "c35939e3e0f2b5007bf39e7850f726d79efe8d5014fbda1553f193587c02160a",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/sources/original-negative-record.json",
+      "source": "deils-live-privacy-bind-20261025/sources/original-negative-record.json",
+      "source_sha256": "d055d561db2a4a222e5668faed0f80e7176f54ae22a4277aba001ece68b49e17",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/sources/original-positive-record.json",
+      "source": "deils-live-privacy-bind-20261025/sources/original-positive-record.json",
+      "source_sha256": "5902f5e114dcc65ae9433e605d175f101519bea2c6a94625d707f0a9d8d4d2e1",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/sources/historical-caller-submission.json",
+      "source": "deils-live-privacy-bind-20261025/sources/historical-caller-submission.json",
+      "source_sha256": "8864be312b2f7680750d3bab6e2b5228a18f6065074e6cb3d589227d45079a20",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/PYTHON_RESULTS.json",
+      "source": "deils-live-privacy-bind-20261025/PYTHON_RESULTS.json",
+      "source_sha256": "753e4058debaea7cfc5817b74cc6ddd8ee60135d70e1e66dc37c6b87dde1e92a",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/NODE_RESULTS.json",
+      "source": "deils-live-privacy-bind-20261025/NODE_RESULTS.json",
+      "source_sha256": "79083f4924c6afa670af487bea5f09d08873cb3508bf0f3be9f9bc0711f696e8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/DETERMINISM.json",
+      "source": "deils-live-privacy-bind-20261025/DETERMINISM.json",
+      "source_sha256": "610064e23fbd966fdb8a7f885d13efbbae675ea7523f97f86f9deaf74768b431",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/LOCAL_RUNS.json",
+      "source": "deils-live-privacy-bind-20261025/LOCAL_RUNS.json",
+      "source_sha256": "5218dc1cb93fb49e8675139978e207cc2b85ce2d82ed6b1e575eca7b6695d80b",
+      "transformation": "Remove workstation paths; preserve labels/timestamps/exits/output digests"
+    },
+    {
+      "path": "evidence/recorded/STABILITY.json",
+      "source": "deils-live-privacy-bind-20261025/STABILITY.json",
+      "source_sha256": "874ca4976349c366691bce0fd58c0bac7cb1fe6d96ba30fdd5dbe1cd6ee0405b",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/TRUST_PREFLIGHT.json",
+      "source": "deils-live-privacy-bind-20261025/TRUST_PREFLIGHT.json",
+      "source_sha256": "1b5d41e624524f2c8201270b520fae93e9bad58667c2155f72f67e92b641aa2a",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/node-normal.stderr",
+      "source": "deils-live-privacy-bind-20261025/logs/node-normal.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/node-normal.stdout",
+      "source": "deils-live-privacy-bind-20261025/logs/node-normal.stdout",
+      "source_sha256": "79083f4924c6afa670af487bea5f09d08873cb3508bf0f3be9f9bc0711f696e8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/node-repeat.stderr",
+      "source": "deils-live-privacy-bind-20261025/logs/node-repeat.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/node-repeat.stdout",
+      "source": "deils-live-privacy-bind-20261025/logs/node-repeat.stdout",
+      "source_sha256": "79083f4924c6afa670af487bea5f09d08873cb3508bf0f3be9f9bc0711f696e8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/python-normal.stderr",
+      "source": "deils-live-privacy-bind-20261025/logs/python-normal.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/python-normal.stdout",
+      "source": "deils-live-privacy-bind-20261025/logs/python-normal.stdout",
+      "source_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/python-optimized.stderr",
+      "source": "deils-live-privacy-bind-20261025/logs/python-optimized.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/python-optimized.stdout",
+      "source": "deils-live-privacy-bind-20261025/logs/python-optimized.stdout",
+      "source_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/python-repeat.stderr",
+      "source": "deils-live-privacy-bind-20261025/logs/python-repeat.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/recorded/logs/python-repeat.stdout",
+      "source": "deils-live-privacy-bind-20261025/logs/python-repeat.stdout",
+      "source_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/STOP.json",
+      "source": "deils-live-terminal-20261025/STOP.json",
+      "source_sha256": "14a306b033667aff8401f372da08e986abba058747b4fca8bc5a80cf7fe32581",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/OFFLINE_RECONCILIATION.json",
+      "source": "deils-live-terminal-20261025/OFFLINE_RECONCILIATION.json",
+      "source_sha256": "4198636cc93f033cd1c5db270b4a53980622a15e22b5f5eff84da5f531c5ea3a",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/PRIVACY_REDACTION.json",
+      "source": "deils-live-terminal-20261025/PRIVACY_REDACTION.json",
+      "source_sha256": "f5a7b036f44926bc429527e1873250f1f412a0f00bd9440007a9bffce8b33c8c",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/PREHASH_RESULT.json",
+      "source": "deils-live-terminal-20261025/PREHASH_RESULT.json",
+      "source_sha256": "2b17b74c5ba70c588c2a5ea28985d3c7a915fa0e1185c6ebdae4d3d1368e9fbc",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/negative-before.body",
+      "source": "deils-live-terminal-20261025/http/negative-before.body",
+      "source_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/negative-before.meta.json",
+      "source": "deils-live-terminal-20261025/http/negative-before.meta.json",
+      "source_sha256": "f6eae5d26d51ef52db1699c80589c2977733781bf7768da92543fa121ff05cc5",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/prehash-before.body",
+      "source": "deils-live-terminal-20261025/http/prehash-before.body",
+      "source_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/prehash-before.meta.json",
+      "source": "deils-live-terminal-20261025/http/prehash-before.meta.json",
+      "source_sha256": "3af0a6d0d8a3d852cb1b657d3bb11edf565b0ac70b94fb2c2d51b3de050f0e09",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/prehash-post.body",
+      "source": "deils-live-terminal-20261025/http/prehash-post.body",
+      "source_sha256": "ee31066ce959620e04a216008f6023c0025e7a6ba447aae3e5e5d116abd8f73f",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/prehash-post.meta.json",
+      "source": "deils-live-terminal-20261025/http/prehash-post.meta.json",
+      "source_sha256": "7d78dbc8c4692b16d1c6a44e7536ddb4c4400c7416a8ac468b0e141cbf3db288",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/prehash-after.body",
+      "source": "deils-live-terminal-20261025/http/prehash-after.body",
+      "source_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/prehash-after.meta.json",
+      "source": "deils-live-terminal-20261025/http/prehash-after.meta.json",
+      "source_sha256": "395f0ed98e48499729ffc7bdc0b7ffdaae333d14920e57ea10274d8c16aaffee",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/terminal-before.body",
+      "source": "deils-live-terminal-20261025/http/terminal-before.body",
+      "source_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/terminal-before.meta.json",
+      "source": "deils-live-terminal-20261025/http/terminal-before.meta.json",
+      "source_sha256": "e6bb4ff0559df020862672daf6531276241614e57ec23dd93ab556ddcd944224",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/terminal-post.body",
+      "source": "deils-live-terminal-20261025/http/terminal-post.body",
+      "source_sha256": "e501bcefef30fc0361a252317131f290d88090b9e483875e1bb49bc72256ca42",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/terminal-post.meta.json",
+      "source": "deils-live-terminal-20261025/http/terminal-post.meta.json",
+      "source_sha256": "fc214da105e5bed3ec6f31febbc96dd13d184a8254dbd82cd57acd1faecfba58",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/terminal-after.body",
+      "source": "deils-live-terminal-20261025/http/terminal-after.body",
+      "source_sha256": "c00d1d2b4651721342c0ba41f3e527ac2ddda747bd305b118dbd4b58100aba25",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/terminal-after.meta.json",
+      "source": "deils-live-terminal-20261025/http/terminal-after.meta.json",
+      "source_sha256": "f1473553da0ebbe9ae548d1ca566b62e58a8397fb73dd6f65e8a737acc5663d7",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/protected-before.body",
+      "source": "deils-live-terminal-20261025/http/protected-before.body",
+      "source_sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/protected-before.meta.json",
+      "source": "deils-live-terminal-20261025/http/protected-before.meta.json",
+      "source_sha256": "bebdbf5975021b59afbbc981ea714d76ec31b1518c77ced466ac1a0e80732b4d",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/protected-after.body",
+      "source": "deils-live-terminal-20261025/http/protected-after.body",
+      "source_sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/protected-after.meta.json",
+      "source": "deils-live-terminal-20261025/http/protected-after.meta.json",
+      "source_sha256": "8caf67caf8e1162d8b369daaf2e1a1b03b5cc1bd0b085d7542ffe697075307bd",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/prehash-post.request.body",
+      "source": "deils-live-terminal-20261025/http/prehash-post.request.body",
+      "source_sha256": "4674e74196a749a073f21c92ae785b35c6dcb443b2a76dc1c53cf719f623e2d7",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/terminal/http/terminal-post.request.body",
+      "source": "deils-live-terminal-20261025/http/terminal-post.request.body",
+      "source_sha256": "8864be312b2f7680750d3bab6e2b5228a18f6065074e6cb3d589227d45079a20",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/initial-positive/attestation.body",
+      "source": "deils-live-negative-prep-20261025/sources/attestation.body",
+      "source_sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/initial-positive/attestation.meta.json",
+      "source": "deils-live-negative-prep-20261025/sources/attestation.meta.json",
+      "source_sha256": "0529c2483cdba09d11d4e238f33cb1d453906a9316e98bc15243c84208d4d255",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/initial-positive/attestation-after.body",
+      "source": "deils-live-negative-prep-20261025/sources/attestation-after.body",
+      "source_sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/initial-positive/attestation-after.meta.json",
+      "source": "deils-live-negative-prep-20261025/sources/attestation-after.meta.json",
+      "source_sha256": "90b108f79bd73139215235efef1a9a971d626a127d9a11436a0ad674cf4004af",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/negative-before.sanitized.json",
+      "source": "deils-live-privacy-bind-20261025/http/negative-before.sanitized.json",
+      "source_sha256": "9e5b2d56e75f6fafe04c04f10fd5a9621fc6e76b5f451d537ab34306b5759d25",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/negative-before.inventory.json",
+      "source": "deils-live-privacy-bind-20261025/http/negative-before.inventory.json",
+      "source_sha256": "b9fab122a62fea7f0d4257e77202724508fec9b9321eee5d926beeb0285fd314",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/negative-before.meta.json",
+      "source": "deils-live-privacy-bind-20261025/http/negative-before.meta.json",
+      "source_sha256": "25ed39fbd146c35b672ff796b7e0c1bb19cd440a2cb83a1e29dd64382a1772d6",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/negative-before.request.json",
+      "source": "deils-live-privacy-bind-20261025/http/negative-before.request.json",
+      "source_sha256": "d83248609e0482af0641880a2a00464d3c939c219ee2e53c66f19bb4b3f85ad1",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/positive-before.sanitized.json",
+      "source": "deils-live-privacy-bind-20261025/http/positive-before.sanitized.json",
+      "source_sha256": "24111a1abc22c80bae87023d343b45b827861529ddc8077150654909120d6e1d",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/positive-before.inventory.json",
+      "source": "deils-live-privacy-bind-20261025/http/positive-before.inventory.json",
+      "source_sha256": "f6f2de53853c8b9d458b03d39d6ed7a57321dc71fed2f3d86630a6b34a691603",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/positive-before.meta.json",
+      "source": "deils-live-privacy-bind-20261025/http/positive-before.meta.json",
+      "source_sha256": "afc86ef2367d64ddb93647b21b0091ec223be91c956584bdc96acf9dbb5c8e4a",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/positive-before.request.json",
+      "source": "deils-live-privacy-bind-20261025/http/positive-before.request.json",
+      "source_sha256": "7e751ec8bd68b3e0f838bc76dc239c484a21123396df8ecd6b20dae1fb27c456",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/verify-negative.sanitized.json",
+      "source": "deils-live-privacy-bind-20261025/http/verify-negative.sanitized.json",
+      "source_sha256": "94da1bfbf8b49a7057ddda29a257c6c9643f7d72f444d5e96e6d5242d6548342",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/verify-negative.inventory.json",
+      "source": "deils-live-privacy-bind-20261025/http/verify-negative.inventory.json",
+      "source_sha256": "028de8cb6f03afb08d4c06cdea307b8da3e99dd9dfef391eeaa8c6ac41c75738",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/verify-negative.meta.json",
+      "source": "deils-live-privacy-bind-20261025/http/verify-negative.meta.json",
+      "source_sha256": "b24b54ecbaba54b958c75c43d34f21b1ff2a91d6b8b3a6095932f846b49d3758",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/verify-negative.request.json",
+      "source": "deils-live-privacy-bind-20261025/http/verify-negative.request.json",
+      "source_sha256": "fcca320746db553d3ae2d32beb8c55818f583af4a244ec10591fc9737de7a51e",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/negative-after.sanitized.json",
+      "source": "deils-live-privacy-bind-20261025/http/negative-after.sanitized.json",
+      "source_sha256": "9e5b2d56e75f6fafe04c04f10fd5a9621fc6e76b5f451d537ab34306b5759d25",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/negative-after.inventory.json",
+      "source": "deils-live-privacy-bind-20261025/http/negative-after.inventory.json",
+      "source_sha256": "b9fab122a62fea7f0d4257e77202724508fec9b9321eee5d926beeb0285fd314",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/negative-after.meta.json",
+      "source": "deils-live-privacy-bind-20261025/http/negative-after.meta.json",
+      "source_sha256": "673be2e4e1167ca9c02ccf918d448ff1caae0793beae0f207b20ed68e14ba4c3",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/negative-after.request.json",
+      "source": "deils-live-privacy-bind-20261025/http/negative-after.request.json",
+      "source_sha256": "83aea41563336f0ddfecd91b0e22ce7548094a3fc993da90d1b9705c7368e238",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/positive-after.sanitized.json",
+      "source": "deils-live-privacy-bind-20261025/http/positive-after.sanitized.json",
+      "source_sha256": "24111a1abc22c80bae87023d343b45b827861529ddc8077150654909120d6e1d",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/positive-after.inventory.json",
+      "source": "deils-live-privacy-bind-20261025/http/positive-after.inventory.json",
+      "source_sha256": "f6f2de53853c8b9d458b03d39d6ed7a57321dc71fed2f3d86630a6b34a691603",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/positive-after.meta.json",
+      "source": "deils-live-privacy-bind-20261025/http/positive-after.meta.json",
+      "source_sha256": "e9db4d1c88d1ce017875811a762c9c330fbef4f695aeecd59da1f36104383e96",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/positive-after.request.json",
+      "source": "deils-live-privacy-bind-20261025/http/positive-after.request.json",
+      "source_sha256": "8b1f3e0ccb5feeb0f28a36de5193370767c9088258e7b31306b2336cf3dcc1b1",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/verify-negative.request.body",
+      "source": "deils-live-privacy-bind-20261025/http/verify-negative.request.body",
+      "source_sha256": "879fe805621bec66bc24aea2261e7df32ce7a3b934a4a9ff75559e59d25b86bc",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/well-known-key.body",
+      "source": "deils-live-privacy-bind-20261025/http/well-known-key.body",
+      "source_sha256": "5006c5c783aea0e5cdbb8f824eea6872c7eae74a7968f4741d2c823b041f54db",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/well-known-key.meta.json",
+      "source": "deils-live-privacy-bind-20261025/http/well-known-key.meta.json",
+      "source_sha256": "23142d321281237f609cbacabcd0bc814e6ee39f486422dfba52986584ede3d9",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/governance-key.body",
+      "source": "deils-live-privacy-bind-20261025/http/governance-key.body",
+      "source_sha256": "5006c5c783aea0e5cdbb8f824eea6872c7eae74a7968f4741d2c823b041f54db",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "evidence/fixed/http/governance-key.meta.json",
+      "source": "deils-live-privacy-bind-20261025/http/governance-key.meta.json",
+      "source_sha256": "ff36b3dfcfa99e0b186e43ca1642cedc36f0cafd854b30356c3b58252cf9d5c9",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "sources/observed-openapi-excerpt.json",
+      "source": "deils-live-privacy-bind-20261025/http/openapi.body",
+      "source_sha256": "03f49fbb796bb2d0cc6bafc8c7e9eea70bb646e7adbce92910de4e9a93a568bd",
+      "transformation": "Relevant paths and request schemas only; not a standalone complete OpenAPI document"
+    },
+    {
+      "path": "replay/sources/test-vectors.csv",
+      "source": "bitcoin/bips@100ba872c808946155b1eeb8c4568058f2eea0a7/bip-0340/test-vectors.csv",
+      "source_sha256": "34c9d1d9c3a88d524bc80778540dc43f8306ec249a7485293063c376db851c2d",
+      "transformation": "Remove secret-key and auxiliary-randomness values; 19 verification tuples unchanged"
+    },
+    {
+      "path": "replay/verify_python.py",
+      "source": "deils-live-privacy-bind-20261025/verify_python.py",
+      "source_sha256": "aeb3ac92501d657151a3018f1182d6c1613d2146d775940c8d6e4b850f4845bc",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/verify_node.mjs",
+      "source": "deils-live-privacy-bind-20261025/crypto/verify_node.mjs",
+      "source_sha256": "68f917faccc40f747a57c2bd4e733ffc62e08f02e616dfc409dcf99a03d723d0",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/pythonlib/LICENSE",
+      "source": "deils-live-privacy-bind-20261025/crypto/pythonlib/LICENSE",
+      "source_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/pythonlib/rfc8785/_impl.py",
+      "source": "deils-live-privacy-bind-20261025/crypto/pythonlib/rfc8785/_impl.py",
+      "source_sha256": "c25bc3a046528482d53bee3487b837f31dd9c05f33e8f13288c7aab320932cec",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/pythonlib/rfc8785/__init__.py",
+      "source": "deils-live-privacy-bind-20261025/crypto/pythonlib/rfc8785/__init__.py",
+      "source_sha256": "fa44927afd547caf7547247078bcf28863d1e69caf116d258c532b3f20ffd154",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/curves/abstract/curve.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/curves/abstract/curve.js",
+      "source_sha256": "0af8761099681b25c9c91353195c94f24e043a4f793d1653c9e12394126f9eec",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/curves/abstract/hash-to-curve.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/curves/abstract/hash-to-curve.js",
+      "source_sha256": "9066601336e86c06f6efce142105a72da775ff9337334e731154078ec92659c0",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/curves/abstract/modular.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/curves/abstract/modular.js",
+      "source_sha256": "5c9526d20d2fb88eea54ca77bf869ec7b7bdde154682289dc345e41ec3c2950c",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/curves/abstract/weierstrass.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/curves/abstract/weierstrass.js",
+      "source_sha256": "4c6daff9db5674cf9fba182c5581404afbe7792b17d4525b9351c445433eaece",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/curves/secp256k1.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/curves/secp256k1.js",
+      "source_sha256": "1e68950f5c26c9b6b380d1389b6acd2c1d6166c1c375c29beef84f143e6b0f6a",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/curves/utils.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/curves/utils.js",
+      "source_sha256": "cb31bbe5c4f6ce19593b64aa32fb9f559f3c02cfbb49885beda18deffa7bd4e8",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/hashes/_md.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/hashes/_md.js",
+      "source_sha256": "a112f0fe1b15db00f2638618c436a17be1c5e13baf19d02fcc29016ae1db2233",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/hashes/_u64.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/hashes/_u64.js",
+      "source_sha256": "e48c0cfc10810439a4807b46db136ce603a3fa09b62584f513ef2f3ca496af54",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/hashes/hmac.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/hashes/hmac.js",
+      "source_sha256": "b834a4e7ffecb7847fd87ebd792f7fdd13003d448acee5e8d97a6b77b8620797",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/hashes/sha2.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/hashes/sha2.js",
+      "source_sha256": "3ddc587c588283cbceed4dd9929cefcce06a0c231b54d4c6f0f99c478c686c00",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/hashes/utils.js",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/hashes/utils.js",
+      "source_sha256": "11319ec0a8132a0c2ced8c98af33ae9274c001d6baf4f4709c4a6115e031a3c5",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/curves/package.json",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/curves/package.json",
+      "source_sha256": "588b510f1b8804bdf820acbd14065126286d92575c45811acef08fe480899469",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/curves/LICENSE",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/curves/LICENSE",
+      "source_sha256": "4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/hashes/package.json",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/hashes/package.json",
+      "source_sha256": "ceb30ba96a14786c419db53f2b8d3d59ece7ac5221c198ac03def462cf96ef23",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/node_modules/@noble/hashes/LICENSE",
+      "source": "deils-live-privacy-bind-20261025/crypto/node_modules/@noble/hashes/LICENSE",
+      "source_sha256": "4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec",
+      "transformation": "byte-exact copy"
+    },
+    {
+      "path": "replay/crypto/public_records.mjs",
+      "source": "deils-live-privacy-bind-20261025/crypto/verify_node.mjs",
+      "source_sha256": "68f917faccc40f747a57c2bd4e733ffc62e08f02e616dfc409dcf99a03d723d0",
+      "transformation": "Reuse admission/identity/signature functions and the 13 public-record controls; exclude three content-dependent controls; compare to saved actual results"
+    }
+  ]
+}

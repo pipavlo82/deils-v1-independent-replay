@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "records": {
+    "negative": {
+      "event_id": "f993519ebdcdc6329662cc2e0104f33f5c2fd02dadc44112fb98f786bf08fd3f",
+      "record_binding": true,
+      "original_record_unchanged": true,
+      "nip01_id": true,
+      "signed_record_jcs": true,
+      "record": {
+        "commitment_hash": "sha256:da9d73871cc0084ea3d2f5a2534becdc688349e7c2106ca3bd6e525d1ceed06e",
+        "ledger_position": 17,
+        "profile": "deils-reveal-v1",
+        "proof_id": "proof_f0c2bd0e9bd475f872fd",
+        "type": "deils-commitment-record"
+      }
+    },
+    "positive": {
+      "event_id": "3b40439b3b741752035fe38fc698f6884aa670ed5b8abf7c454155b17ae7b968",
+      "record_binding": true,
+      "original_record_unchanged": true,
+      "nip01_id": true,
+      "signed_record_jcs": true,
+      "record": {
+        "commitment_hash": "sha256:d3a134d0227c4ff1b30ec13a4a3b6145d2a059ee2b612c274c7bb59b5de844ef",
+        "ledger_position": 16,
+        "profile": "deils-reveal-v1",
+        "proof_id": "proof_d7aea6052737f4335eb8",
+        "type": "deils-commitment-record"
+      }
+    }
+  },
+  "positive": {
+    "state": "content_bound",
+    "profile_source": "authenticated original commitment record",
+    "canonical_bytes": 1744,
+    "canonical_sha256": "d3a134d0227c4ff1b30ec13a4a3b6145d2a059ee2b612c274c7bb59b5de844ef",
+    "commitment": "sha256:d3a134d0227c4ff1b30ec13a4a3b6145d2a059ee2b612c274c7bb59b5de844ef",
+    "blinding_format": true,
+    "integer_lane": true,
+    "private_canonical_path": "private/positive-python.jcs",
+    "canonical_bytes_not_in_shareable_archive": true
+  },
+  "privacy": {
+    "get_state": "content_commitment_mismatch",
+    "get_fields_exhaustively_classified": true,
+    "nested_sensitive_paths": [
+      {
+        "path": "/mismatch_evidence/revealed_content/blinding",
+        "type": "str"
+      }
+    ],
+    "caller_content_exactly_matches_prior_request": true,
+    "stored_proof_payload_present": false,
+    "stored_proof_signature_present": false,
+    "server_original_blinding_disclosure_observed": false,
+    "only_blinding_source": "Known caller-submitted synthetic fixture",
+    "verify_valid": false,
+    "verify_state": "not_evaluated",
+    "verify_status": "content_commitment_mismatch",
+    "verify_sensitive_paths": [],
+    "limitation": "Bounded response inspection and source attribution, not a server-side noninterference proof"
+  },
+  "content_mutations": [
+    {
+      "name": "modified_revealed_content",
+      "commitment_matches": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "modified_blinding",
+      "commitment_matches": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "content_driven_downgrade",
+      "commitment_matches": false,
+      "expected": false,
+      "selected_profile": "deils-reveal-v1",
+      "passed": true
+    }
+  ],
+  "signature_algorithm_note": "Schnorr checked separately by pinned Node noble; Python independently recomputes IDs/JCS/hashes"
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "comparisons": {
+    "python-normal__python-repeat": {
+      "stdout_identical": true,
+      "stderr_identical": true
+    },
+    "python-normal__python-optimized": {
+      "stdout_identical": true,
+      "stderr_identical": true
+    },
+    "node-normal__node-repeat": {
+      "stdout_identical": true,
+      "stderr_identical": true
+    }
+  },
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "node": "v22.15.0"
+}

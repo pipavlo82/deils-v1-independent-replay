@@ -1,0 +1,21 @@
+{
+  "method": "GET",
+  "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+  "started_utc": "2026-10-25T15:56:32.865898+00:00",
+  "request_headers": {
+    "Accept": "application/json",
+    "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+  },
+  "request_body_sha256": null,
+  "status": 200,
+  "finished_utc": "2026-10-25T15:56:33.201082+00:00",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Sun, 25 Oct 2026 15:56:33 GMT",
+    "Content-Type": "application/json"
+  },
+  "raw_response_sha256": "189301d511dbe38023f43435ee0cfc3764e5b436afafe39935fb3a5f1d83ead0",
+  "raw_response_bytes": 1882,
+  "sanitized": true,
+  "state": "content_commitment_mismatch"
+}

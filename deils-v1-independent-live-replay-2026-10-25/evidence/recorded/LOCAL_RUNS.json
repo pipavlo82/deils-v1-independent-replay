@@ -1,0 +1,76 @@
+[
+  {
+    "label": "python-normal",
+    "command": [
+      "python",
+      "-B",
+      "verify_python.py"
+    ],
+    "cwd": "<original-evidence-directory>",
+    "started_utc": "2026-10-25T16:02:32.700603+00:00",
+    "exit": 0,
+    "stdout_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 3083,
+    "stderr_bytes": 0
+  },
+  {
+    "label": "python-repeat",
+    "command": [
+      "python",
+      "-B",
+      "verify_python.py"
+    ],
+    "cwd": "<original-evidence-directory>",
+    "started_utc": "2026-10-25T16:02:32.830866+00:00",
+    "exit": 0,
+    "stdout_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 3083,
+    "stderr_bytes": 0
+  },
+  {
+    "label": "python-optimized",
+    "command": [
+      "python",
+      "-B",
+      "-O",
+      "verify_python.py"
+    ],
+    "cwd": "<original-evidence-directory>",
+    "started_utc": "2026-10-25T16:02:32.955254+00:00",
+    "exit": 0,
+    "stdout_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 3083,
+    "stderr_bytes": 0
+  },
+  {
+    "label": "node-normal",
+    "command": [
+      "node",
+      "crypto/verify_node.mjs"
+    ],
+    "cwd": "<original-evidence-directory>",
+    "started_utc": "2026-10-25T16:02:33.093340+00:00",
+    "exit": 0,
+    "stdout_sha256": "79083f4924c6afa670af487bea5f09d08873cb3508bf0f3be9f9bc0711f696e8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 7196,
+    "stderr_bytes": 0
+  },
+  {
+    "label": "node-repeat",
+    "command": [
+      "node",
+      "crypto/verify_node.mjs"
+    ],
+    "cwd": "<original-evidence-directory>",
+    "started_utc": "2026-10-25T16:02:33.333164+00:00",
+    "exit": 0,
+    "stdout_sha256": "79083f4924c6afa670af487bea5f09d08873cb3508bf0f3be9f9bc0711f696e8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 7196,
+    "stderr_bytes": 0
+  }
+]

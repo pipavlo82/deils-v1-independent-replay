@@ -1,0 +1,27 @@
+{
+  "attempts": [
+    {
+      "step": "minimal dependency closure",
+      "result": "LOCAL_BUILD_FAILED",
+      "error": "FileNotFoundError: @noble/hashes/sha2",
+      "cause": "Import-like documentation text matched by broad regular expression",
+      "resolution": "Anchor discovery to actual import/export statements;11actual JS dependencies copied; partial attempt preserved outside pack"
+    },
+    {
+      "step": "public observation replay",
+      "result": "LOCAL_CHECK_FAILED",
+      "error": "KeyError: reveal_state",
+      "cause": "Earlier withheld GET used status, unlike later terminal/bound GET",
+      "resolution": "Check the exact historical status field; corrected offline replay passes; no live requests"
+    },
+    {
+      "step": "corrected complete offline replay",
+      "result": "PASS",
+      "controls": 16,
+      "public_controls": 13,
+      "original_results_reproduced": true
+    }
+  ],
+  "no_semantic_failure_in_existing_verifiers": true,
+  "no_failure_counted_as_mutation_kill": true
+}

@@ -1,0 +1,16 @@
+{
+  "method": "GET",
+  "path": "/attestations/proof_d7aea6052737f4335eb8",
+  "started_utc": "2026-10-25T14:53:59.475407+00:00",
+  "finished_utc": "2026-10-25T14:53:59.833055+00:00",
+  "status": 200,
+  "headers": {
+    "Server": "nginx",
+    "Date": "Sun, 25 Oct 2026 14:53:59 GMT",
+    "Content-Type": "application/json"
+  },
+  "raw_response_bytes": 1514,
+  "raw_response_sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860",
+  "redacted": false,
+  "state": "content_withheld"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "Every candidate file and every ZIP member; no nested archives admitted",
+  "candidate_files": 142,
+  "confidential_literal_checks": 7,
+  "credential_patterns": [
+    "PEM_PRIVATE_KEY",
+    "GITHUB_TOKEN",
+    "AWS_ACCESS_KEY",
+    "AUTH_BEARER_VALUE"
+  ],
+  "findings": 0,
+  "protected_payload_shape_checks": true,
+  "official_bip340_private_columns_empty": true,
+  "nested_archives": 0,
+  "limitations": [
+    "Original pre-fix leaked bytes are unavailable; their excluded/redacted source paths were checked structurally.",
+    "Pattern and known-value scanning is not mathematical proof of absence of every possible secret."
+  ],
+  "private_inputs_required_for_optional_replay": 3,
+  "original_raw_private_responses_excluded": 5,
+  "private_canonical_preimages_excluded": 2,
+  "actual_positive_content_and_blinding_published": false
+}

@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "author": "Pavlo Tvardovskyi (pipavlo82)",
+  "exclusions": [
+    {
+      "item": "Positive raw attestation responses, proof/signature, exact canonical preimage and true blinding",
+      "reason": "Confidential content is unnecessary for publication; digests/types/results only",
+      "location": "outside package in original private/"
+    },
+    {
+      "item": "Original pre-fix leaked negative proof/signature",
+      "reason": "Do not republish the privacy disclosure; only redacted observation and wire digest retained",
+      "location": "not available in sanitized source archive"
+    },
+    {
+      "item": "Private keys and signing auxiliary randomness in official BIP340 test vectors",
+      "reason": "Only verification tuples needed",
+      "transformation": "columns1/3 blanked;19verification cases retained"
+    },
+    {
+      "item": "All nested old evidence ZIPs, original live HTTP clients, full OpenAPI, private repo source and unrelated sandbox material",
+      "reason": "Minimize scope and avoid accidental live mutation or disclosure"
+    },
+    {
+      "item": "Local workstation paths in new public command receipts",
+      "reason": "Portability; original invocation structure retained",
+      "transformation": "python executable/cwd replaced by explicit placeholders"
+    },
+    {
+      "item": "Scalar fingerprints under field inventories",
+      "reason": "Low-entropy private fields should not be guessed from per-field hashes",
+      "transformation": "existing inventories retain only paths and types"
+    }
+  ],
+  "retained": [
+    "Two public proof IDs/ledger positions",
+    "Original signed commitment records/public Schnorr signatures",
+    "Public active-key manifests",
+    "Public contract snapshot",
+    "Raw response digests and redacted observations",
+    "Caller-owned zero-blinding synthetic negative fixture",
+    "Sanitized complete local verification outputs",
+    "Required offline verifier dependencies and licenses"
+  ],
+  "distinctions": [
+    "Public commitment-record signatures are not withheld original-proof signatures",
+    "Caller synthetic blinding is not the true blinding",
+    "Original raw-response hash and sanitized-file hash are separate"
+  ],
+  "scan_policy": "Full tree and recursively inspected archive entries; zero nested archives expected; literal confidential values, credential patterns, private-key blocks, CSV private columns, protected object payloads and manifest integrity checked"
+}

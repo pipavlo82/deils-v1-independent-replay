@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-25T14:59:48.034235+00:00",
+  "file": "http/terminal-after.body",
+  "original_wire_sha256": "852eb3842d55797b5b01bc0b9d8dd178766d462206c78dbaed8ddb1621f68aee",
+  "first_sanitized_sha256": "8dc59ed0bff41f919d9dfbd65368bdadb9d5df441c0fb8ac7be51817025e7445",
+  "final_sanitized_sha256": "c00d1d2b4651721342c0ba41f3e527ac2ddda747bd305b118dbd4b58100aba25",
+  "redacted_paths": [
+    "/proof",
+    "/signature"
+  ],
+  "reason": "GET after wrong-content terminal transition disclosed proof material absent in withheld GET. Do not retain/share it.",
+  "no_original_content_hash_or_recovery_attempt": true
+}

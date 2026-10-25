@@ -1,0 +1,10 @@
+{
+  "node": "22.15.0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "noble_curves": "2.0.1",
+  "noble_hashes": "2.0.1",
+  "rfc8785": "0.1.4",
+  "noble_import_closure_files": 11,
+  "source": "Previously executed and hash-verified dependencies; no update performed",
+  "licensing": "Noble MIT and rfc8785 Apache-2.0 licenses retained; upstream code is not relicensed."
+}

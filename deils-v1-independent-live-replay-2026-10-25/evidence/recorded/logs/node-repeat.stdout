@@ -1,0 +1,248 @@
+{
+  "passed": true,
+  "runtime": "v22.15.0",
+  "bip340_implementation": "@noble/curves 2.0.1, pinned existing dependency bytes",
+  "official_bip340_vectors": {
+    "passed": 19,
+    "total": 19
+  },
+  "records": {
+    "negative": {
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": true,
+      "accepted": true,
+      "event_id": "f993519ebdcdc6329662cc2e0104f33f5c2fd02dadc44112fb98f786bf08fd3f",
+      "original_record_unchanged": true
+    },
+    "positive": {
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": true,
+      "accepted": true,
+      "event_id": "3b40439b3b741752035fe38fc698f6884aa670ed5b8abf7c454155b17ae7b968",
+      "original_record_unchanged": true
+    }
+  },
+  "positive": {
+    "canonical_bytes": 1744,
+    "canonical_sha256": "d3a134d0227c4ff1b30ec13a4a3b6145d2a059ee2b612c274c7bb59b5de844ef",
+    "commitment": "sha256:d3a134d0227c4ff1b30ec13a4a3b6145d2a059ee2b612c274c7bb59b5de844ef",
+    "python_node_bytes_equal": true,
+    "blinding_format": true,
+    "integer_lane": true,
+    "selected_profile": "deils-reveal-v1",
+    "profile_source": "authenticated original commitment record"
+  },
+  "local_mutations": {
+    "total": 16,
+    "rejected": 16,
+    "unexpected_acceptances": 0,
+    "crashes": 0,
+    "results": [
+      {
+        "name": "signed_profile_old_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": false,
+        "bip340": true,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "NIP01_ID_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "signed_profile_recomputed_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": false,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "BIP340_SIGNATURE_INVALID",
+        "passed": true
+      },
+      {
+        "name": "signed_proof_id_old_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": false,
+        "bip340": true,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "NIP01_ID_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "signed_proof_id_recomputed_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": false,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "BIP340_SIGNATURE_INVALID",
+        "passed": true
+      },
+      {
+        "name": "signed_ledger_position_old_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": false,
+        "bip340": true,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "NIP01_ID_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "signed_ledger_position_recomputed_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": false,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "BIP340_SIGNATURE_INVALID",
+        "passed": true
+      },
+      {
+        "name": "signed_commitment_hash_old_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": false,
+        "bip340": true,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "NIP01_ID_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "signed_commitment_hash_recomputed_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": false,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "BIP340_SIGNATURE_INVALID",
+        "passed": true
+      },
+      {
+        "name": "unsigned_row_proof_id",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": true,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "ROW_BINDING_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "unsigned_row_ledger_position",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": true,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "ROW_BINDING_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "unsigned_row_commitment_hash",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": true,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "ROW_BINDING_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "unsigned_row_commitment_profile",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": true,
+        "signed_content_exact_jcs": true,
+        "row_binding": false,
+        "accepted": false,
+        "expected_refusal": "ROW_BINDING_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "modified_revealed_content",
+        "commitment_matches": false,
+        "selected_profile": "deils-reveal-v1",
+        "expected_refusal": "CONTENT_COMMITMENT_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "modified_blinding",
+        "commitment_matches": false,
+        "selected_profile": "deils-reveal-v1",
+        "expected_refusal": "CONTENT_COMMITMENT_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "content_driven_downgrade",
+        "commitment_matches": false,
+        "selected_profile": "deils-reveal-v1",
+        "expected_refusal": "CONTENT_COMMITMENT_MISMATCH",
+        "passed": true
+      },
+      {
+        "name": "signature_byte_changed",
+        "structure": true,
+        "trust": true,
+        "tag_unique": true,
+        "nip01_id": true,
+        "bip340": false,
+        "signed_content_exact_jcs": true,
+        "row_binding": true,
+        "accepted": false,
+        "expected_refusal": "BIP340_SIGNATURE_INVALID",
+        "passed": true
+      }
+    ]
+  },
+  "canonicalizer_controls": {
+    "positive": 5,
+    "admission_refusals": 4
+  },
+  "limitation": "Node JSON.parse is not an independent duplicate-member detector; Python strict parsing rejects duplicates before comparison."
+}

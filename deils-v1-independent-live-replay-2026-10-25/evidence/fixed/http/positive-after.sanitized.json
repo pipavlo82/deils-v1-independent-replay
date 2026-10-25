@@ -1,0 +1,57 @@
+{
+  "proof_id": "proof_d7aea6052737f4335eb8",
+  "agent_id": "invinoveritas-deils-v1-live-test",
+  "proof_hash": "df566f893fc782803e00626f7cbdcc4f4351238788ac5c470b73d2709a1132e2",
+  "signature_type": "nostr_event",
+  "created_at": 1792930229,
+  "reveal_state": "content_bound",
+  "commitment_hash": "sha256:d3a134d0227c4ff1b30ec13a4a3b6145d2a059ee2b612c274c7bb59b5de844ef",
+  "ledger_position": 16,
+  "commitment_profile": "deils-reveal-v1",
+  "commitment_record": {
+    "signature_type": "nostr_event",
+    "event": {
+      "id": "3b40439b3b741752035fe38fc698f6884aa670ed5b8abf7c454155b17ae7b968",
+      "pubkey": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+      "created_at": 1792930229,
+      "kind": 30078,
+      "tags": [
+        [
+          "d",
+          "invinoveritas-commitment-proof_d7aea6052737f4335eb8"
+        ],
+        [
+          "t",
+          "invinoveritas"
+        ],
+        [
+          "t",
+          "deils-commitment-record"
+        ],
+        [
+          "profile",
+          "deils-reveal-v1"
+        ],
+        [
+          "commitment",
+          "sha256:d3a134d0227c4ff1b30ec13a4a3b6145d2a059ee2b612c274c7bb59b5de844ef"
+        ]
+      ],
+      "content": "{\"commitment_hash\":\"sha256:d3a134d0227c4ff1b30ec13a4a3b6145d2a059ee2b612c274c7bb59b5de844ef\",\"ledger_position\":16,\"profile\":\"deils-reveal-v1\",\"proof_id\":\"proof_d7aea6052737f4335eb8\",\"type\":\"deils-commitment-record\"}",
+      "sig": "e53e8952a3593ec6b6cf246f6c2005d4c6e0e025da073bb4bbbfd8188782cb5b717893783d73d9b3f78d603010ac54d743f5941c69f3865583d7b484714aae67"
+    },
+    "verify": "POST /verify-proof with {\"event\": commitment_record.event}; then take the profile ONLY from the signed content (a profile in this response or inside the proof content is never authority)."
+  },
+  "proof": {
+    "redacted": true,
+    "type": "dict",
+    "value_sha256": "79807bcf052777a856c77d8c45a9a440b330ea21ad54611fe46ee5416610869e"
+  },
+  "signature": {
+    "redacted": true,
+    "type": "dict",
+    "value_sha256": "2a13d198084ef377de8cacb6e2113d2299f8272b6f28265cf31e33b4bf723f05"
+  },
+  "verify": "SHA-256 the RFC 8785 JCS form of `proof` and compare to commitment_hash (if reveal_state is content_bound), or proof_hash to confirm integrity -- this is exactly what's served here, no projection needed. `signature` is separate, for verifying authenticity independently of content-binding.",
+  "attestation_url": "https://api.babyblueviper.com/attestations/proof_d7aea6052737f4335eb8"
+}

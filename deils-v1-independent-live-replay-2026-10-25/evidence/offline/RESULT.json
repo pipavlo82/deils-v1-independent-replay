@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "network_requests": 0,
+  "public_signed_records": 2,
+  "public_controls_refused": 13,
+  "bip340_vectors": 19,
+  "public_python_jcs_and_event_ids": 2,
+  "saved_observation_consistency": true,
+  "private": {
+    "controls_refused": 16,
+    "canonical_bytes": 1744,
+    "python_node_canonical_bytes_equal": true,
+    "original_recorded_results_match": true,
+    "private_data_exported": false
+  },
+  "runs": [
+    {
+      "label": "public-normal",
+      "command": [
+        "node",
+        "crypto/public_records.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "97a2b784cc4c39fae35f724408a9482a8c686ae0276006971ff5945816d2b9f1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "public-repeat",
+      "command": [
+        "node",
+        "crypto/public_records.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "97a2b784cc4c39fae35f724408a9482a8c686ae0276006971ff5945816d2b9f1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "private-python-normal",
+      "command": [
+        "python",
+        "-B",
+        "verify_python.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "private-python-repeat",
+      "command": [
+        "python",
+        "-B",
+        "verify_python.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "private-python-optimized",
+      "command": [
+        "python",
+        "-B",
+        "-O",
+        "verify_python.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "461d420d7a0af4a11470bb958616880a2b1975a4fb7cff3d2ca205dd1465af97",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "private-node-normal",
+      "command": [
+        "node",
+        "crypto/verify_node.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "79083f4924c6afa670af487bea5f09d08873cb3508bf0f3be9f9bc0711f696e8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "private-node-repeat",
+      "command": [
+        "node",
+        "crypto/verify_node.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "79083f4924c6afa670af487bea5f09d08873cb3508bf0f3be9f9bc0711f696e8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "url": "https://api.babyblueviper.com/attestations/proof_d7aea6052737f4335eb8",
+  "status": 200,
+  "content_type": "application/json",
+  "utc": "2026-10-25T12:29:12.404074+00:00",
+  "bytes": 1514,
+  "sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860"
+}

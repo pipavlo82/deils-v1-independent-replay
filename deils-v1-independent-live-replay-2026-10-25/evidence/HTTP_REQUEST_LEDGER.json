@@ -1,0 +1,425 @@
+{
+  "terminal-replay": {
+    "count": 13,
+    "requests": [
+      {
+        "method": "GET",
+        "path": "/openapi.json",
+        "started_utc": "2026-10-25T14:53:44.168897+00:00",
+        "finished_utc": "2026-10-25T14:53:44.831187+00:00",
+        "status": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:53:44 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_bytes": 232861,
+        "raw_response_sha256": "016c5e770a2e6fc3c116d11e3a737de2f7dfdd498f0735c5760116cef9ecd4de",
+        "redacted": false
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+        "started_utc": "2026-10-25T14:53:58.928744+00:00",
+        "finished_utc": "2026-10-25T14:53:59.275643+00:00",
+        "status": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:53:59 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_bytes": 1514,
+        "raw_response_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8",
+        "redacted": false,
+        "state": "content_withheld"
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_d7aea6052737f4335eb8",
+        "started_utc": "2026-10-25T14:53:59.475407+00:00",
+        "finished_utc": "2026-10-25T14:53:59.833055+00:00",
+        "status": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:53:59 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_bytes": 1514,
+        "raw_response_sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860",
+        "redacted": false,
+        "state": "content_withheld"
+      },
+      {
+        "method": "GET",
+        "path": "/.well-known/agent-handshake",
+        "started_utc": "2026-10-25T14:54:00.028438+00:00",
+        "finished_utc": "2026-10-25T14:54:00.395698+00:00",
+        "status": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:54:00 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_bytes": 5450,
+        "raw_response_sha256": "ba6ef7ba1963784e56c88fa7359320fb54978cf9d348e09dea88d93f25322323",
+        "redacted": false
+      },
+      {
+        "method": "GET",
+        "path": "/governance/pubkey",
+        "started_utc": "2026-10-25T14:54:16.492343+00:00",
+        "finished_utc": "2026-10-25T14:54:16.802670+00:00",
+        "status": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:54:16 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_bytes": 2216,
+        "raw_response_sha256": "5006c5c783aea0e5cdbb8f824eea6872c7eae74a7968f4741d2c823b041f54db",
+        "redacted": false
+      },
+      {
+        "method": "GET",
+        "path": "/health",
+        "started_utc": "2026-10-25T14:54:16.997366+00:00",
+        "finished_utc": "2026-10-25T14:54:17.310042+00:00",
+        "status": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:54:17 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_bytes": 4591,
+        "raw_response_sha256": "0a41f3523b2535525b1f9a7314f51296b615c8481b63392436f778ce456af54f",
+        "redacted": false
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+        "started_utc": "2026-10-25T14:57:59.689495+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-authorized-negative-replay/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T14:58:00.013083+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:57:59 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8",
+        "raw_response_bytes": 1514,
+        "redacted": false,
+        "stored_response_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8"
+      },
+      {
+        "method": "POST",
+        "path": "/prove/proof_f0c2bd0e9bd475f872fd/reveal",
+        "started_utc": "2026-10-25T14:58:00.023073+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-authorized-negative-replay/1.0",
+          "Content-Type": "application/json"
+        },
+        "request_body_sha256": "4674e74196a749a073f21c92ae785b35c6dcb443b2a76dc1c53cf719f623e2d7",
+        "status": 200,
+        "finished_utc": "2026-10-25T14:58:00.329335+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:58:00 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "ee31066ce959620e04a216008f6023c0025e7a6ba447aae3e5e5d116abd8f73f",
+        "raw_response_bytes": 1250,
+        "redacted": false,
+        "stored_response_sha256": "ee31066ce959620e04a216008f6023c0025e7a6ba447aae3e5e5d116abd8f73f"
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+        "started_utc": "2026-10-25T14:58:00.332356+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-authorized-negative-replay/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T14:58:00.629014+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:58:00 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8",
+        "raw_response_bytes": 1514,
+        "redacted": false,
+        "stored_response_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8"
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+        "started_utc": "2026-10-25T14:58:14.988762+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-authorized-negative-replay/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T14:58:15.321811+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:58:15 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8",
+        "raw_response_bytes": 1514,
+        "redacted": false,
+        "stored_response_sha256": "9dfa7e8ec202c3de17f247bd522dbb1423c84f20e09cf67adc67bfe328d6a4f8"
+      },
+      {
+        "method": "POST",
+        "path": "/prove/proof_f0c2bd0e9bd475f872fd/reveal",
+        "started_utc": "2026-10-25T14:58:15.326751+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-authorized-negative-replay/1.0",
+          "Content-Type": "application/json"
+        },
+        "request_body_sha256": "8864be312b2f7680750d3bab6e2b5228a18f6065074e6cb3d589227d45079a20",
+        "status": 200,
+        "finished_utc": "2026-10-25T14:58:15.644844+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:58:15 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "e501bcefef30fc0361a252317131f290d88090b9e483875e1bb49bc72256ca42",
+        "raw_response_bytes": 1507,
+        "redacted": false,
+        "stored_response_sha256": "e501bcefef30fc0361a252317131f290d88090b9e483875e1bb49bc72256ca42"
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+        "started_utc": "2026-10-25T14:58:15.647830+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-authorized-negative-replay/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T14:58:15.963125+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:58:15 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "852eb3842d55797b5b01bc0b9d8dd178766d462206c78dbaed8ddb1621f68aee",
+        "raw_response_bytes": 6043,
+        "redacted": true,
+        "stored_response_sha256": "c00d1d2b4651721342c0ba41f3e527ac2ddda747bd305b118dbd4b58100aba25",
+        "initial_stored_response_sha256": "8dc59ed0bff41f919d9dfbd65368bdadb9d5df441c0fb8ac7be51817025e7445",
+        "additional_redacted_paths": [
+          "/proof",
+          "/signature"
+        ],
+        "capture_metadata_file": "terminal-after.capture.json"
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_d7aea6052737f4335eb8",
+        "started_utc": "2026-10-25T14:58:15.965113+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-authorized-negative-replay/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T14:58:16.279110+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 14:58:16 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860",
+        "raw_response_bytes": 1514,
+        "redacted": false,
+        "stored_response_sha256": "44776426807fba35c1b5afc3b6dde6c10b8fba30e5b222575bce789df9cb9860"
+      }
+    ]
+  },
+  "privacy-positive-replay": {
+    "count": 8,
+    "requests": [
+      {
+        "method": "GET",
+        "path": "/openapi.json",
+        "started_utc": "2026-10-25T15:55:50.689831+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T15:55:51.371362+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 15:55:51 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "03f49fbb796bb2d0cc6bafc8c7e9eea70bb646e7adbce92910de4e9a93a568bd",
+        "raw_response_bytes": 232861,
+        "sanitized": false
+      },
+      {
+        "method": "GET",
+        "path": "/.well-known/verifier-keys.json",
+        "started_utc": "2026-10-25T15:55:51.588603+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T15:55:51.915761+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 15:55:51 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "5006c5c783aea0e5cdbb8f824eea6872c7eae74a7968f4741d2c823b041f54db",
+        "raw_response_bytes": 2216,
+        "sanitized": false
+      },
+      {
+        "method": "GET",
+        "path": "/governance/pubkey",
+        "started_utc": "2026-10-25T15:55:52.124888+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T15:55:52.457736+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 15:55:52 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "5006c5c783aea0e5cdbb8f824eea6872c7eae74a7968f4741d2c823b041f54db",
+        "raw_response_bytes": 2216,
+        "sanitized": false
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+        "started_utc": "2026-10-25T15:56:32.865898+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T15:56:33.201082+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 15:56:33 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "189301d511dbe38023f43435ee0cfc3764e5b436afafe39935fb3a5f1d83ead0",
+        "raw_response_bytes": 1882,
+        "sanitized": true,
+        "state": "content_commitment_mismatch"
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_d7aea6052737f4335eb8",
+        "started_utc": "2026-10-25T15:56:33.395004+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T15:56:33.706663+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 15:56:33 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "d6dcea1c3552852cabcbc7a3ffb2d9cb3d8e6c0ef3ee6c57c5f9ea3a8e60f624",
+        "raw_response_bytes": 6022,
+        "sanitized": true,
+        "state": "content_bound"
+      },
+      {
+        "method": "POST",
+        "path": "/verify-proof",
+        "started_utc": "2026-10-25T15:56:33.914342+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0",
+          "Content-Type": "application/json"
+        },
+        "request_body_sha256": "879fe805621bec66bc24aea2261e7df32ce7a3b934a4a9ff75559e59d25b86bc",
+        "status": 200,
+        "finished_utc": "2026-10-25T15:56:34.237629+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 15:56:34 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "48734452214b51d3f552e329c25dc81f18cc1c90d386cd5e706ee0af7f98104a",
+        "raw_response_bytes": 263,
+        "sanitized": true,
+        "state": "content_commitment_mismatch"
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+        "started_utc": "2026-10-25T16:02:43.870826+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T16:02:44.191664+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 16:02:44 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "189301d511dbe38023f43435ee0cfc3764e5b436afafe39935fb3a5f1d83ead0",
+        "raw_response_bytes": 1882,
+        "sanitized": true,
+        "state": "content_commitment_mismatch"
+      },
+      {
+        "method": "GET",
+        "path": "/attestations/proof_d7aea6052737f4335eb8",
+        "started_utc": "2026-10-25T16:02:44.817132+00:00",
+        "request_headers": {
+          "Accept": "application/json",
+          "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+        },
+        "request_body_sha256": null,
+        "status": 200,
+        "finished_utc": "2026-10-25T16:02:45.132609+00:00",
+        "response_headers": {
+          "Server": "nginx",
+          "Date": "Sun, 25 Oct 2026 16:02:45 GMT",
+          "Content-Type": "application/json"
+        },
+        "raw_response_sha256": "d6dcea1c3552852cabcbc7a3ffb2d9cb3d8e6c0ef3ee6c57c5f9ea3a8e60f624",
+        "raw_response_bytes": 6022,
+        "sanitized": true,
+        "state": "content_bound"
+      }
+    ]
+  }
+}

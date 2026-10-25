@@ -1,0 +1,14 @@
+{
+  "negative": {
+    "raw_bytes_equal": true,
+    "bytes": 1882,
+    "sha256": "189301d511dbe38023f43435ee0cfc3764e5b436afafe39935fb3a5f1d83ead0",
+    "state": "content_commitment_mismatch"
+  },
+  "positive": {
+    "raw_bytes_equal": true,
+    "bytes": 6022,
+    "sha256": "d6dcea1c3552852cabcbc7a3ffb2d9cb3d8e6c0ef3ee6c57c5f9ea3a8e60f624",
+    "state": "content_bound"
+  }
+}

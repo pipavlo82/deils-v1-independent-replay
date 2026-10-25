@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/",
+    "type": "dict"
+  },
+  {
+    "path": "/valid",
+    "type": "bool"
+  },
+  {
+    "path": "/status",
+    "type": "str"
+  },
+  {
+    "path": "/state",
+    "type": "str"
+  },
+  {
+    "path": "/error",
+    "type": "str"
+  },
+  {
+    "path": "/published_pubkey",
+    "type": "str"
+  }
+]

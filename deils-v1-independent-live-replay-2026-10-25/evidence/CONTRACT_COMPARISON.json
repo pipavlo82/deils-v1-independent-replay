@@ -1,0 +1,14 @@
+{
+  "public_snapshot_matches_recorded_paths": {
+    "/attestations/{proof_id}": false,
+    "/prove/{proof_id}/reveal": true
+  },
+  "recorded_openapi_sha256": "03f49fbb796bb2d0cc6bafc8c7e9eea70bb646e7adbce92910de4e9a93a568bd",
+  "snapshot_sha256": "e4629dec96ae78844515234d202eda560fd0734eaf4a67c04c494985170fde4c",
+  "snapshot_is_later_documentation": true,
+  "not_deployment_attestation": true,
+  "differing_json_paths": [
+    "/get/description"
+  ],
+  "interpretation": "Later snapshot adds withholding prose to GET description; reveal operation unchanged. Not a retroactive deployment proof."
+}

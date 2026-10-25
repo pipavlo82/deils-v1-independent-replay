@@ -1,0 +1,10 @@
+{
+  "method": "GET",
+  "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+  "started_utc": "2026-10-25T16:02:43.870826+00:00",
+  "request_headers": {
+    "Accept": "application/json",
+    "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+  },
+  "request_body_sha256": null
+}

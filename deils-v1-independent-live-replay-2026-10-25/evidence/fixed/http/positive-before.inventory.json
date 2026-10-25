@@ -1,0 +1,378 @@
+[
+  {
+    "path": "/",
+    "type": "dict"
+  },
+  {
+    "path": "/proof_id",
+    "type": "str"
+  },
+  {
+    "path": "/agent_id",
+    "type": "str"
+  },
+  {
+    "path": "/proof_hash",
+    "type": "str"
+  },
+  {
+    "path": "/signature_type",
+    "type": "str"
+  },
+  {
+    "path": "/created_at",
+    "type": "int"
+  },
+  {
+    "path": "/reveal_state",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_hash",
+    "type": "str"
+  },
+  {
+    "path": "/ledger_position",
+    "type": "int"
+  },
+  {
+    "path": "/commitment_profile",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record",
+    "type": "dict"
+  },
+  {
+    "path": "/commitment_record/signature_type",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event",
+    "type": "dict"
+  },
+  {
+    "path": "/commitment_record/event/id",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/pubkey",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/created_at",
+    "type": "int"
+  },
+  {
+    "path": "/commitment_record/event/kind",
+    "type": "int"
+  },
+  {
+    "path": "/commitment_record/event/tags",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/0",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/0/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/0/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/1",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/1/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/1/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/2",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/2/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/2/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/3",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/3/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/3/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/4",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/4/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/4/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/content",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/sig",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/verify",
+    "type": "str"
+  },
+  {
+    "path": "/proof",
+    "type": "dict"
+  },
+  {
+    "path": "/proof/schema",
+    "type": "str"
+  },
+  {
+    "path": "/proof/platform",
+    "type": "str"
+  },
+  {
+    "path": "/proof/version",
+    "type": "str"
+  },
+  {
+    "path": "/proof/action_id",
+    "type": "str"
+  },
+  {
+    "path": "/proof/kind",
+    "type": "str"
+  },
+  {
+    "path": "/proof/status",
+    "type": "str"
+  },
+  {
+    "path": "/proof/price_sats",
+    "type": "int"
+  },
+  {
+    "path": "/proof/target_hash",
+    "type": "str"
+  },
+  {
+    "path": "/proof/input_hash",
+    "type": "str"
+  },
+  {
+    "path": "/proof/output_hash",
+    "type": "str"
+  },
+  {
+    "path": "/proof/artifact_id",
+    "type": "str"
+  },
+  {
+    "path": "/proof/audit_created_at",
+    "type": "int"
+  },
+  {
+    "path": "/proof/duration_ms",
+    "type": "int"
+  },
+  {
+    "path": "/proof/proved_at",
+    "type": "int"
+  },
+  {
+    "path": "/proof/bitcoin_only",
+    "type": "bool"
+  },
+  {
+    "path": "/proof/payment",
+    "type": "str"
+  },
+  {
+    "path": "/proof/verify_url",
+    "type": "str"
+  },
+  {
+    "path": "/proof/verifier_pubkey",
+    "type": "str"
+  },
+  {
+    "path": "/proof/verify_offline",
+    "type": "str"
+  },
+  {
+    "path": "/proof/independent_nodes",
+    "type": "list"
+  },
+  {
+    "path": "/proof/independent_nodes/0",
+    "type": "str"
+  },
+  {
+    "path": "/proof/independent_nodes/1",
+    "type": "str"
+  },
+  {
+    "path": "/proof/verify_how",
+    "type": "str"
+  },
+  {
+    "path": "/proof/key_id",
+    "type": "str"
+  },
+  {
+    "path": "/proof/verifier_keys",
+    "type": "str"
+  },
+  {
+    "path": "/proof/conformance_suite",
+    "type": "str"
+  },
+  {
+    "path": "/proof/blinding",
+    "type": "str"
+  },
+  {
+    "path": "/signature",
+    "type": "dict"
+  },
+  {
+    "path": "/signature/signature_type",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event",
+    "type": "dict"
+  },
+  {
+    "path": "/signature/event/id",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/pubkey",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/created_at",
+    "type": "int"
+  },
+  {
+    "path": "/signature/event/kind",
+    "type": "int"
+  },
+  {
+    "path": "/signature/event/tags",
+    "type": "list"
+  },
+  {
+    "path": "/signature/event/tags/0",
+    "type": "list"
+  },
+  {
+    "path": "/signature/event/tags/0/0",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/0/1",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/1",
+    "type": "list"
+  },
+  {
+    "path": "/signature/event/tags/1/0",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/1/1",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/2",
+    "type": "list"
+  },
+  {
+    "path": "/signature/event/tags/2/0",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/2/1",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/3",
+    "type": "list"
+  },
+  {
+    "path": "/signature/event/tags/3/0",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/3/1",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/4",
+    "type": "list"
+  },
+  {
+    "path": "/signature/event/tags/4/0",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/4/1",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/5",
+    "type": "list"
+  },
+  {
+    "path": "/signature/event/tags/5/0",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/tags/5/1",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/content",
+    "type": "str"
+  },
+  {
+    "path": "/signature/event/sig",
+    "type": "str"
+  },
+  {
+    "path": "/verify",
+    "type": "str"
+  },
+  {
+    "path": "/attestation_url",
+    "type": "str"
+  }
+]

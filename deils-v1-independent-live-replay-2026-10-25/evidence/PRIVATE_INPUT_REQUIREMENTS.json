@@ -1,0 +1,17 @@
+{
+  "negative-before.raw.json": {
+    "sha256": "189301d511dbe38023f43435ee0cfc3764e5b436afafe39935fb3a5f1d83ead0",
+    "bytes": 1882,
+    "in_shareable_archive": false
+  },
+  "positive-before.raw.json": {
+    "sha256": "d6dcea1c3552852cabcbc7a3ffb2d9cb3d8e6c0ef3ee6c57c5f9ea3a8e60f624",
+    "bytes": 6022,
+    "in_shareable_archive": false
+  },
+  "verify-negative.raw.json": {
+    "sha256": "48734452214b51d3f552e329c25dc81f18cc1c90d386cd5e706ee0af7f98104a",
+    "bytes": 263,
+    "in_shareable_archive": false
+  }
+}

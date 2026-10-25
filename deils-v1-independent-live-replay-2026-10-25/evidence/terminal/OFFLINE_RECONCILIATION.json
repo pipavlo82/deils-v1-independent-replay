@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "terminal_http_200": true,
+    "terminal_status_mismatch": true,
+    "terminal_true": true,
+    "matches_false": true,
+    "synthetic_recomputed_hash_matches": true,
+    "committed_hash_unchanged": true,
+    "revealed_content_is_only_submitted_synthetic": true,
+    "post_record_unchanged": true,
+    "persistent_get_http_200": true,
+    "persistent_reveal_state_mismatch": true,
+    "persistent_get_no_content_bound": true,
+    "persistent_identity_unchanged": true,
+    "persistent_signed_record_unchanged": true,
+    "protected_get_http_200": true,
+    "protected_byte_identical": true,
+    "protected_withheld": true,
+    "exactly_one_terminal_journal": true
+  },
+  "all_checks_passed": true,
+  "network_requests": 0,
+  "recorded_harness_failure": {
+    "phase": "terminal",
+    "error": "RuntimeError: Persistent mismatch not established",
+    "utc": "2026-10-25T14:58:16.284105+00:00",
+    "no_retry": true
+  },
+  "explanation": "The live harness checked status on terminal GET; actual GET uses reveal_state. Correctness established from recorded response only; STOP retained, no rerun.",
+  "terminal_hash_evaluated_field": "NOT_EXPOSED",
+  "terminal_hash_evidence": "recomputed_hash equals independently calculated synthetic JCS SHA256",
+  "verdict": "PARTIAL",
+  "disclosure_finding": "Terminal mismatch persisted, but subsequent authorized GET exposed a proof body absent from withheld response. Scope/intent needs maintainer review; original proof material redacted and not recomputed.",
+  "no_further_live_requests": true
+}

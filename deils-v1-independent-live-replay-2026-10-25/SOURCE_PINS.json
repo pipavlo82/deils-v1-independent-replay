@@ -1,0 +1,37 @@
+{
+  "public_contract": {
+    "repository": "babyblueviper1/invinoveritas",
+    "revision": "992f36b2661299557fe6c05e91fa089e05021cef",
+    "path": "deils/reveal-contract-2026-10-25.json",
+    "byte_length": 4752,
+    "sha256": "e4629dec96ae78844515234d202eda560fd0734eaf4a67c04c494985170fde4c",
+    "git_blob_sha": "614e9edf23b595bbf3c345455dbb03f9d422cd61",
+    "fetched_utc": "2026-10-25T17:28:08.115028+00:00"
+  },
+  "references": [
+    {
+      "repository": "nostr-protocol/nips",
+      "revision": "d47a2ec8aacb9d01ac00e6294ae77582f483ff68",
+      "path": "01.md",
+      "sha256": "d5c5ce2b5639eee440b5d342dbe81af42008838cb260ec04acaffaffd29dcaf7"
+    },
+    {
+      "repository": "bitcoin/bips",
+      "revision": "100ba872c808946155b1eeb8c4568058f2eea0a7",
+      "path": "bip-0340/test-vectors.csv",
+      "sha256": "34c9d1d9c3a88d524bc80778540dc43f8306ec249a7485293063c376db851c2d"
+    },
+    {
+      "repository": "babyblueviper1/invinoveritas",
+      "revision": "06d34d75db6888fb6ebee54e6ce5facb783140d2",
+      "path": "keys/governance-pubkey.json",
+      "sha256": "c35939e3e0f2b5007bf39e7850f726d79efe8d5014fbda1553f193587c02160a"
+    }
+  ],
+  "private_deployment_mapping": {
+    "source": "Invinoveritas public contract snapshot; upstream-reported, not independently verified",
+    "refusal_contract": "6f8c80be",
+    "terminal_mismatch_withholding_fix": "95e066cb",
+    "boundary_described": "e8149678"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "method": "POST",
+  "path": "/verify-proof",
+  "started_utc": "2026-10-25T15:56:33.914342+00:00",
+  "request_headers": {
+    "Accept": "application/json",
+    "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0",
+    "Content-Type": "application/json"
+  },
+  "request_body_sha256": "879fe805621bec66bc24aea2261e7df32ce7a3b934a4a9ff75559e59d25b86bc"
+}

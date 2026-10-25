@@ -1,0 +1,336 @@
+[
+  {
+    "id": "signed_profile_old_id",
+    "transformation": "Set signed event.content.profile to \"deils-reveal-v0\"; recanonicalize signed content; retain original event ID and signature.",
+    "expected_boundary": "NIP01_ID_MISMATCH",
+    "observed": "ID=false; signature-over-old-ID=true; complete admission=false",
+    "category": "identity-binding + cryptographic ID",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signed_profile_old_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": false,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "NIP01_ID_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "signed_profile_recomputed_id",
+    "transformation": "Set signed event.content.profile to \"deils-reveal-v0\"; recanonicalize signed content; recompute event ID; retain original signature.",
+    "expected_boundary": "BIP340_SIGNATURE_INVALID",
+    "observed": "ID=true; signature=false; complete admission=false",
+    "category": "cryptographic signature",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signed_profile_recomputed_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": false,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "BIP340_SIGNATURE_INVALID",
+      "passed": true
+    }
+  },
+  {
+    "id": "signed_proof_id_old_id",
+    "transformation": "Set signed event.content.proof_id to \"local-only-modified-proof\"; recanonicalize signed content; retain original event ID and signature.",
+    "expected_boundary": "NIP01_ID_MISMATCH",
+    "observed": "ID=false; signature-over-old-ID=true; complete admission=false",
+    "category": "identity-binding + cryptographic ID",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signed_proof_id_old_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": false,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "NIP01_ID_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "signed_proof_id_recomputed_id",
+    "transformation": "Set signed event.content.proof_id to \"local-only-modified-proof\"; recanonicalize signed content; recompute event ID; retain original signature.",
+    "expected_boundary": "BIP340_SIGNATURE_INVALID",
+    "observed": "ID=true; signature=false; complete admission=false",
+    "category": "cryptographic signature",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signed_proof_id_recomputed_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": false,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "BIP340_SIGNATURE_INVALID",
+      "passed": true
+    }
+  },
+  {
+    "id": "signed_ledger_position_old_id",
+    "transformation": "Set signed event.content.ledger_position to 17; recanonicalize signed content; retain original event ID and signature.",
+    "expected_boundary": "NIP01_ID_MISMATCH",
+    "observed": "ID=false; signature-over-old-ID=true; complete admission=false",
+    "category": "identity-binding + cryptographic ID",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signed_ledger_position_old_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": false,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "NIP01_ID_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "signed_ledger_position_recomputed_id",
+    "transformation": "Set signed event.content.ledger_position to 17; recanonicalize signed content; recompute event ID; retain original signature.",
+    "expected_boundary": "BIP340_SIGNATURE_INVALID",
+    "observed": "ID=true; signature=false; complete admission=false",
+    "category": "cryptographic signature",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signed_ledger_position_recomputed_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": false,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "BIP340_SIGNATURE_INVALID",
+      "passed": true
+    }
+  },
+  {
+    "id": "signed_commitment_hash_old_id",
+    "transformation": "Set signed event.content.commitment_hash to \"sha256:\" + 64 zero hex characters; recanonicalize signed content; retain original event ID and signature.",
+    "expected_boundary": "NIP01_ID_MISMATCH",
+    "observed": "ID=false; signature-over-old-ID=true; complete admission=false",
+    "category": "identity-binding + cryptographic ID",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signed_commitment_hash_old_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": false,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "NIP01_ID_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "signed_commitment_hash_recomputed_id",
+    "transformation": "Set signed event.content.commitment_hash to \"sha256:\" + 64 zero hex characters; recanonicalize signed content; recompute event ID; retain original signature.",
+    "expected_boundary": "BIP340_SIGNATURE_INVALID",
+    "observed": "ID=true; signature=false; complete admission=false",
+    "category": "cryptographic signature",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signed_commitment_hash_recomputed_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": false,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "BIP340_SIGNATURE_INVALID",
+      "passed": true
+    }
+  },
+  {
+    "id": "unsigned_row_proof_id",
+    "transformation": "Change only unsigned attestation row proof_id to \"local-only-modified-proof\"; retain original signed record.",
+    "expected_boundary": "ROW_BINDING_MISMATCH",
+    "observed": "ID/signature=true; row binding=false; complete admission=false",
+    "category": "record/row identity-binding",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "unsigned_row_proof_id",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "ROW_BINDING_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "unsigned_row_ledger_position",
+    "transformation": "Change only unsigned attestation row ledger_position to 17; retain original signed record.",
+    "expected_boundary": "ROW_BINDING_MISMATCH",
+    "observed": "ID/signature=true; row binding=false; complete admission=false",
+    "category": "record/row identity-binding",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "unsigned_row_ledger_position",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "ROW_BINDING_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "unsigned_row_commitment_hash",
+    "transformation": "Change only unsigned attestation row commitment_hash to \"sha256:\" + 64 zeros; retain original signed record.",
+    "expected_boundary": "ROW_BINDING_MISMATCH",
+    "observed": "ID/signature=true; row binding=false; complete admission=false",
+    "category": "record/row identity-binding",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "unsigned_row_commitment_hash",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "ROW_BINDING_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "unsigned_row_commitment_profile",
+    "transformation": "Change only unsigned attestation row commitment_profile to \"deils-reveal-v0\"; retain original signed record.",
+    "expected_boundary": "ROW_BINDING_MISMATCH",
+    "observed": "ID/signature=true; row binding=false; complete admission=false",
+    "category": "record/row identity-binding",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "unsigned_row_commitment_profile",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": true,
+      "signed_content_exact_jcs": true,
+      "row_binding": false,
+      "accepted": false,
+      "expected_refusal": "ROW_BINDING_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "modified_revealed_content",
+    "transformation": "Add __local_audit_change:true to a copy of revealed content; keep original signed commitment.",
+    "expected_boundary": "CONTENT_COMMITMENT_MISMATCH",
+    "observed": "commitment_matches=false; selected profile remains deils-reveal-v1",
+    "category": "canonicalization + cryptographic commitment binding",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": false,
+    "historical_result": {
+      "name": "modified_revealed_content",
+      "commitment_matches": false,
+      "selected_profile": "deils-reveal-v1",
+      "expected_refusal": "CONTENT_COMMITMENT_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "modified_blinding",
+    "transformation": "Replace the first blinding hex character with \"1\" if it was \"0\", otherwise \"0\"; keep the remaining 63 characters and original commitment.",
+    "expected_boundary": "CONTENT_COMMITMENT_MISMATCH",
+    "observed": "commitment_matches=false; selected profile remains deils-reveal-v1",
+    "category": "canonicalization + cryptographic commitment binding",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": false,
+    "historical_result": {
+      "name": "modified_blinding",
+      "commitment_matches": false,
+      "selected_profile": "deils-reveal-v1",
+      "expected_refusal": "CONTENT_COMMITMENT_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "content_driven_downgrade",
+    "transformation": "Add profile:\"deils-reveal-v0\" inside content; retain independently selected authenticated v1 profile and original commitment.",
+    "expected_boundary": "CONTENT_COMMITMENT_MISMATCH",
+    "observed": "commitment_matches=false; selected profile remains deils-reveal-v1",
+    "category": "canonicalization + cryptographic commitment binding",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": false,
+    "historical_result": {
+      "name": "content_driven_downgrade",
+      "commitment_matches": false,
+      "selected_profile": "deils-reveal-v1",
+      "expected_refusal": "CONTENT_COMMITMENT_MISMATCH",
+      "passed": true
+    }
+  },
+  {
+    "id": "signature_byte_changed",
+    "transformation": "Replace the first signature hex character with \"1\" if it was \"0\", otherwise \"0\"; keep event content and ID.",
+    "expected_boundary": "BIP340_SIGNATURE_INVALID",
+    "observed": "ID=true; signature=false; complete admission=false",
+    "category": "cryptographic signature",
+    "execution": "LOCAL ONLY",
+    "public_pack_replay": true,
+    "historical_result": {
+      "name": "signature_byte_changed",
+      "structure": true,
+      "trust": true,
+      "tag_unique": true,
+      "nip01_id": true,
+      "bip340": false,
+      "signed_content_exact_jcs": true,
+      "row_binding": true,
+      "accepted": false,
+      "expected_refusal": "BIP340_SIGNATURE_INVALID",
+      "passed": true
+    }
+  }
+]

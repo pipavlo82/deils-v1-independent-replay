@@ -1,0 +1,324 @@
+{
+  "info": {
+    "title": "invinoveritas",
+    "description": "The **verification layer for autonomous agents** — a neutral verdict before an irreversible action (`/review`), a signed proof after (`/prove`), and a public, on-chain-verifiable track record (`/ledger`) you can audit without trusting us. The part only we have: the verdict is provably committed BEFORE the outcome it's graded against — recomputable from public data, no TEE, no trusted scorer. Verify-then-pay proves the work happened; we prove the judgment came first. We also run the open conformance registry where agent verifiers are graded against the same recomputable bar — ours included, no green by assertion. Competitors conform to and certify against our suite, across more than one anchoring mechanism; we report our own gaps in the open. Model-agnostic by construction: we verify the output, not the model that produced it. As inference commoditizes and agents route to the cheapest interchangeable model, output-quality variance — not capability — becomes the risk on an irreversible action, and the one thing an agent cannot self-serve is a verdict on its own correctness. This matters most exactly where it's least obvious: a local or open-weight model has no vendor safety layer, no ToS enforcement, no accountable party upstream — the independent check matters MORE, not less, the further a model runs from a hosted, policed provider. Route to any model, local or hosted; verify before you act. Dogfooded on our own important decisions. A reasoning / structured-decision / agent-memory / sandboxed-execution / Lightning-native-marketplace stack runs underneath as supporting infrastructure. Pay-per-use via Lightning Network — Bearer Token (recommended) or L402, plus x402 (USDC on Base) or card. Free registration (api_key); top-up and withdrawal flows; agent-to-agent coordination primitives; agent Lightning addresses (agent_id@api.babyblueviper.com); BearerProvider for LangChain.",
+    "contact": {
+      "name": "invinoveritas",
+      "url": "https://invinoveritas.dev/",
+      "email": "contact@invinoveritas.dev"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.13.0",
+    "x-guidance": "invinoveritas — the VERIFICATION LAYER for autonomous agents: a neutral verdict before an irreversible action, a signed proof after, and a public, on-chain-verifiable track record of those verdicts you can audit without trusting us — the oversight + judgment the agent can't self-issue. Pay-per-call services settled in USDC via x402 on Base (also Lightning/L402 or a funded Bearer balance). Paid resources carry x-payment-info and answer an unauthenticated probe with a 402 challenge; send the JSON body in the operation schema, then retry with the X-PAYMENT header. Good entry points: POST /review (capital-scale-aware verdict before an agent ships an irreversible action), POST /prove (signed, independently-verifiable attestation of a prior execution), GET /ledger (the public signed verdict track record). Routes marked security:[] are free or Bearer/identity-gated and are not x402 resources."
+  },
+  "paths": {
+    "/attestations/{proof_id}": {
+      "get": {
+        "tags": [
+          "execution"
+        ],
+        "summary": "Get Attestation",
+        "description": "Public retrieval of a previously issued /prove attestation. Free, no auth.\n\nAnyone can verify the proof by checking proof_hash against SHA-256 of the\nsorted proof payload JSON. The attestation was paid for at prove-time.",
+        "operationId": "get_attestation_attestations__proof_id__get",
+        "parameters": [
+          {
+            "name": "proof_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Proof Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/prove/{proof_id}/reveal": {
+      "post": {
+        "tags": [
+          "execution"
+        ],
+        "summary": "Prove Reveal",
+        "description": "FREE, no-auth: bind held-back content to a previously published /prove commitment_hash\n(DEILS leg-2). Anyone holding the true content can reveal it — the check is a pure function\nof (stored commitment_hash, revealed content), never caller identity, so a third party can\nconfirm the bind without trusting whoever discloses.\n\nReturns content_bound (hash matches, content now disclosed) or content_commitment_mismatch\n(TERMINAL, fail-closed — a positive evidence state, not an absence: either the revealed\ncontent was tampered with, or the original commitment was bad. Preserves the full evidence\nbundle so the disagreement is legible, and does not adjudicate malice vs error).\n\nResponse contract (deils-reveal-v1). Every outcome below is HTTP 200 with a JSON body; the\nonly non-200s are 404 (unknown proof_id), 422 (body is not {\"content\": <JSON object>}) and\n429 (per-IP rate limit). There is no attempt counter: refusals write nothing.\nChecked in this order, first failure wins:\n  1. commitment_record_mismatch  terminal=true,  hash_evaluated=false  (stored signed record\n     does not bind this row; integrity check, no public trigger)\n  2. input_refused               terminal=false, hash_evaluated=false  reason is one of\n     \"integer outside +-(2^53-1)\" or \"<type> values are outside the v1 lane (integers only)\"\n  3. blinding_missing / blinding_malformed  terminal=false, hash_evaluated=false  (blinding\n     must be 64 lowercase hex chars)\n  4. input_refused               terminal=false, hash_evaluated=false  reason starts\n     \"content outside the RFC 8785 JCS domain (\" -- e.g. a lone surrogate string \"\\ud800\"\n  5. content_bound (matches=true) or content_commitment_mismatch (terminal=true, row is\n     permanently flipped; later calls return the stored evidence)\nRefusal bodies also carry proof_id, reason and the commitment record view\n(commitment_profile, commitment_record).",
+        "operationId": "prove_reveal_prove__proof_id__reveal_post",
+        "parameters": [
+          {
+            "name": "proof_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Proof Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProveRevealRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/verify-proof": {
+      "post": {
+        "tags": [
+          "execution"
+        ],
+        "summary": "Verify Proof",
+        "description": "FREE, no-auth: verify a counterparty's invinoveritas proof — the agent-to-agent trust handshake.\n\nHand over the signed `event` another agent gave you (or a proof_id). We recompute the Nostr event id,\nverify the schnorr signature, and confirm the pubkey IS invinoveritas's PUBLISHED key — so you learn,\nWITHOUT trusting that agent OR us, whether invinoveritas really issued this verdict/proof. (You can run\nthe exact same NIP-01 check yourself; we're a convenience, not a trust root.) Optionally pass\nexpect_artifact_hash to also confirm the proof covers the exact output you received, or\nexpect_intended_verifier to confirm the proof's declared consumption context matches you.\nAdd verifier_signature alongside expect_intended_verifier to go further -- cryptographically\nPROVE you hold that address's key (eip155 namespace only) rather than just asserting it.",
+        "operationId": "verify_proof_verify_proof_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/VerifyProofRequest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Req"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "VerifyProofRequest": {
+        "properties": {
+          "event": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Event",
+            "description": "The signed proof event {id,pubkey,created_at,kind,tags,content,sig} from a /prove or /review(sign=true) response. Trustless path — no lookup, no trust."
+          },
+          "proof_event": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Proof Event",
+            "description": "Alias for `event`, accepting the exact key name GET /ledger/{N} itself uses for the same object (`proof_event`) — added 2026-08-17 after a real caller (大賀俊勝/Toshikatsu, independent verification walk) hit this: Pydantic silently drops an unrecognized field rather than erroring, so posting a /ledger response's `proof_event` value under that same key previously no-op'd into the 'provide `event`' error with no hint the key name itself was the problem. If both `event` and `proof_event` are provided, `event` takes precedence."
+          },
+          "proof_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Proof Id",
+            "description": "Alternatively, a stored attestation proof_id to fetch + verify (convenience)."
+          },
+          "event_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Event Id",
+            "description": "Alternatively, the Nostr event id from a /review(sign=true), /prove, or /witness proof — fetches the durably-stored full event (independent of relay retention) and verifies it. Use this when you only have {id,pubkey,sig}, not the full event, from wherever the proof was shared."
+          },
+          "pq_companion_signature": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pq Companion Signature",
+            "description": "Optional (added 2026-08-12): the ML-DSA-65 companion signature {algorithm,pq_pubkey,signature_hex,signs} from a proof issued alongside `event`, if you have one — additively verified and reported as checks.pq_companion_verified, never required. Only used with the `event` path; event_id/proof_id lookups fetch their own stored companion sig automatically if one exists."
+          },
+          "expect_artifact_hash": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expect Artifact Hash",
+            "description": "Optional: assert the proof covers THIS artifact (sha256 hex of the output you were handed)."
+          },
+          "expect_intended_verifier": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expect Intended Verifier",
+            "description": "Optional (added 2026-08-16, per safal207's content/generation/consumption-identity framing on crewAIInc/crewAI#4877): assert the proof's declared intended_verifier matches who YOU are, closing the same gap expect_artifact_hash closes for content_identity -- but for consumption_identity. Checks a self-declared field (see /review's own intended_verifier docstring: 'we cannot confirm who will actually present this proof downstream'), so a match confirms the ISSUER's declared intent, not that delivery was actually restricted to you."
+          },
+          "verifier_signature": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verifier Signature",
+            "description": "Optional (added 2026-08-16, per atomicdjt's presenter-bound critique on the same thread): an EIP-191 personal_sign signature over the fixed challenge 'invinoveritas-verify-proof:<event_id>', signed by the private key controlling the address in expect_intended_verifier (eip155:* CAIP-10 namespace only). If provided and it recovers to that address, sets checks.intended_verifier_authenticated=true -- this is presenter-bound (you cryptographically proved you hold that key), not just intent-bound (a caller-supplied string anyone could claim). Requires expect_intended_verifier to also be set. Other CAIP-10 namespaces are not yet supported and are reported as such, not silently ignored."
+          },
+          "expect_max_age_seconds": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expect Max Age Seconds",
+            "description": "Optional (added 2026-08-17, per tyche-dev's mandate-gate design on w3c-cg/ai-agent-protocol#44): by default `/verify-proof` never rejects on staleness -- `age_seconds` is purely informational, you decide. Pass this to turn it into an actual MUST-reject gate, symmetric to expect_artifact_hash/expect_intended_verifier: if the proof's age_seconds exceeds this bound, checks.freshness_within_bound=false and valid flips to false. If age_seconds cannot be determined at all (an older proof with no verified_at), this fails CLOSED (freshness_within_bound=false, with a freshness_within_bound_error explaining why) rather than silently passing -- you asked to enforce freshness and we couldn't confirm it, so it does not pass. Omit this param and nothing changes (informational-only, exactly today's behavior)."
+          },
+          "fault_injection": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fault Injection",
+            "description": "Public test hook (added 2026-09-28 for draft-krausz-verification-state §3.1): the only accepted value is 'instrument_failure'. The verifier then raises inside its own evaluation path, exactly where an import or library failure would, so the not_evaluated + state_reason=instrument_failure response is reproducible from outside rather than only in our unit tests. The response carries `fault_injected` so it can never be mistaken for a real failure, and `valid` stays false. Any other value is a 400."
+          },
+          "consume": {
+            "type": "boolean",
+            "title": "Consume",
+            "description": "Optional (added 2026-09-07, per a nullifier-design comparison against crewAI#4877/ERC-8380): a verdict-issuance layer binding request+decision correctly is not automatically a replay-safe execution-consumption layer -- decision_ref is a pure function, so nothing stopped the identical, still-valid proof from being presented more than once. Pass true at the ACTUAL dispatch point (never earlier -- consuming before you've genuinely acted on it burns the verdict for nothing) to atomically claim single-use consumption of this proof's decision_ref. Sets `checks.decision_ref_consumed` (true only on the first-ever presentation) and `checks.decision_ref_already_consumed` (true if some earlier call already consumed it -- a real replay), and flips `valid` to false on a replay. Absent by default: omit this and nothing changes, matching every other optional check here. Requires decision_ref_recomputes to have passed (a tampered proof cannot burn a real nullifier slot) and only applies to verdict proofs that carry a decision_ref at all (non-applicable otherwise, reported as such, never silently treated as consumed).",
+            "default": false
+          },
+          "expect_pq_binding": {
+            "type": "boolean",
+            "title": "Expect Pq Binding",
+            "description": "Optional (added 2026-09-01, Vértice/verticecriativo pq-wallet-binding — a non-custodial post-quantum key-binding anchor, PqBindingAnchor.sol, first-write-immutable). Requires `expect_intended_verifier` to also be an eip155 CAIP-10 address. When true, we independently verify — never trusting Vértice's gateway blindly — that this address has a real, anchored post-quantum key binding: fetch the binding statement, recompute its content-address ourselves via RFC-8785 JCS + sha256, and independently eth_call `PqBindingAnchor.bindingOf(address)` on a public Sepolia RPC, requiring our own recompute to match BOTH the gateway's claim AND the real on-chain value. Sets `checks.pq_binding_verified` (true/false/null, derived 1:1 from `checks.pq_binding_evidence`) and `checks.pq_binding_evidence` — a genuine three-way read: `\"verified\"`, `\"refuted\"` (a confirmed mismatch or a confirmed-absent on-chain binding — we actually completed the check and it came back negative), or `\"unverifiable\"` (the check could not be completed at all — network failure, malformed/unusable gateway data, or bad input; NEVER conflated with `\"refuted\"`, since that would misreport an incomplete check as a genuine finding) — plus a `pq_binding` disclosure block (statement, pq_pubkey, which values matched, which RPC answered, and a machine-readable `reason` code for any non-`\"verified\"` result). This is testnet-only as of this field (chain_id 11155111, disclosed in the response) and an IDENTITY provenance claim, not transaction-level quantum safety — a stronger provenance signal on top of `verifier_signature`'s ECDSA proof, not a replacement for it. `valid` flips to false only when evidence is `\"refuted\"`; `\"unverifiable\"` never flips `valid` on its own, since that would let an unrelated network hiccup or gateway data bug reject an otherwise-good proof.",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "VerifyProofRequest",
+        "description": "S169 — verify a counterparty's invinoveritas proof (the agent-to-agent trust handshake)."
+      },
+      "ProveRevealRequest": {
+        "properties": {
+          "content": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Content",
+            "description": "The exact proof_payload content being revealed/disclosed."
+          }
+        },
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "title": "ProveRevealRequest",
+        "description": "DEILS leg-2: reveal content for a proof issued with disclose=False and bind it to the\nalready-published commitment_hash. Anyone holding the true content can reveal it — the check\nis a pure function of (stored commitment_hash, revealed content), not caller identity."
+      }
+    }
+  }
+}

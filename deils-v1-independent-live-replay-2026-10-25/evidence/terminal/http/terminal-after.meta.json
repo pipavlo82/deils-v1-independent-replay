@@ -1,0 +1,27 @@
+{
+  "method": "GET",
+  "path": "/attestations/proof_f0c2bd0e9bd475f872fd",
+  "started_utc": "2026-10-25T14:58:15.647830+00:00",
+  "request_headers": {
+    "Accept": "application/json",
+    "User-Agent": "DEILS-authorized-negative-replay/1.0"
+  },
+  "request_body_sha256": null,
+  "status": 200,
+  "finished_utc": "2026-10-25T14:58:15.963125+00:00",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Sun, 25 Oct 2026 14:58:15 GMT",
+    "Content-Type": "application/json"
+  },
+  "raw_response_sha256": "852eb3842d55797b5b01bc0b9d8dd178766d462206c78dbaed8ddb1621f68aee",
+  "raw_response_bytes": 6043,
+  "redacted": true,
+  "stored_response_sha256": "c00d1d2b4651721342c0ba41f3e527ac2ddda747bd305b118dbd4b58100aba25",
+  "initial_stored_response_sha256": "8dc59ed0bff41f919d9dfbd65368bdadb9d5df441c0fb8ac7be51817025e7445",
+  "additional_redacted_paths": [
+    "/proof",
+    "/signature"
+  ],
+  "capture_metadata_file": "terminal-after.capture.json"
+}

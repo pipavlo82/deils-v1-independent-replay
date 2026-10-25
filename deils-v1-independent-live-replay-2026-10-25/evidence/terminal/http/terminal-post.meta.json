@@ -1,0 +1,22 @@
+{
+  "method": "POST",
+  "path": "/prove/proof_f0c2bd0e9bd475f872fd/reveal",
+  "started_utc": "2026-10-25T14:58:15.326751+00:00",
+  "request_headers": {
+    "Accept": "application/json",
+    "User-Agent": "DEILS-authorized-negative-replay/1.0",
+    "Content-Type": "application/json"
+  },
+  "request_body_sha256": "8864be312b2f7680750d3bab6e2b5228a18f6065074e6cb3d589227d45079a20",
+  "status": 200,
+  "finished_utc": "2026-10-25T14:58:15.644844+00:00",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Sun, 25 Oct 2026 14:58:15 GMT",
+    "Content-Type": "application/json"
+  },
+  "raw_response_sha256": "e501bcefef30fc0361a252317131f290d88090b9e483875e1bb49bc72256ca42",
+  "raw_response_bytes": 1507,
+  "redacted": false,
+  "stored_response_sha256": "e501bcefef30fc0361a252317131f290d88090b9e483875e1bb49bc72256ca42"
+}

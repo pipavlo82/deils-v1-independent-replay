@@ -1,0 +1,20 @@
+{
+  "method": "GET",
+  "path": "/.well-known/verifier-keys.json",
+  "started_utc": "2026-10-25T15:55:51.588603+00:00",
+  "request_headers": {
+    "Accept": "application/json",
+    "User-Agent": "DEILS-readonly-privacy-bind-audit/1.0"
+  },
+  "request_body_sha256": null,
+  "status": 200,
+  "finished_utc": "2026-10-25T15:55:51.915761+00:00",
+  "response_headers": {
+    "Server": "nginx",
+    "Date": "Sun, 25 Oct 2026 15:55:51 GMT",
+    "Content-Type": "application/json"
+  },
+  "raw_response_sha256": "5006c5c783aea0e5cdbb8f824eea6872c7eae74a7968f4741d2c823b041f54db",
+  "raw_response_bytes": 2216,
+  "sanitized": false
+}

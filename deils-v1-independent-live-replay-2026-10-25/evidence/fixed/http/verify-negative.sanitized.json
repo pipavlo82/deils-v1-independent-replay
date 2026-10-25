@@ -1,0 +1,7 @@
+{
+  "valid": false,
+  "status": "content_commitment_mismatch",
+  "state": "not_evaluated",
+  "error": "content held back \u2014 it is disclosed only after POST /prove/{proof_id}/reveal binds it.",
+  "published_pubkey": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7"
+}

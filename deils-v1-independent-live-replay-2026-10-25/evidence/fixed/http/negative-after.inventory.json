@@ -1,0 +1,170 @@
+[
+  {
+    "path": "/",
+    "type": "dict"
+  },
+  {
+    "path": "/proof_id",
+    "type": "str"
+  },
+  {
+    "path": "/status",
+    "type": "str"
+  },
+  {
+    "path": "/reveal_state",
+    "type": "str"
+  },
+  {
+    "path": "/terminal",
+    "type": "bool"
+  },
+  {
+    "path": "/ledger_position",
+    "type": "int"
+  },
+  {
+    "path": "/commitment_hash",
+    "type": "str"
+  },
+  {
+    "path": "/created_at",
+    "type": "int"
+  },
+  {
+    "path": "/mismatch_evidence",
+    "type": "dict"
+  },
+  {
+    "path": "/mismatch_evidence/committed_hash",
+    "type": "str"
+  },
+  {
+    "path": "/mismatch_evidence/revealed_content",
+    "type": "dict"
+  },
+  {
+    "path": "/mismatch_evidence/revealed_content/blinding",
+    "type": "str"
+  },
+  {
+    "path": "/mismatch_evidence/recomputed_hash",
+    "type": "str"
+  },
+  {
+    "path": "/note",
+    "type": "str"
+  },
+  {
+    "path": "/attestation_url",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_profile",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record",
+    "type": "dict"
+  },
+  {
+    "path": "/commitment_record/signature_type",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event",
+    "type": "dict"
+  },
+  {
+    "path": "/commitment_record/event/id",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/pubkey",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/created_at",
+    "type": "int"
+  },
+  {
+    "path": "/commitment_record/event/kind",
+    "type": "int"
+  },
+  {
+    "path": "/commitment_record/event/tags",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/0",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/0/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/0/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/1",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/1/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/1/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/2",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/2/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/2/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/3",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/3/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/3/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/4",
+    "type": "list"
+  },
+  {
+    "path": "/commitment_record/event/tags/4/0",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/tags/4/1",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/content",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/event/sig",
+    "type": "str"
+  },
+  {
+    "path": "/commitment_record/verify",
+    "type": "str"
+  }
+]

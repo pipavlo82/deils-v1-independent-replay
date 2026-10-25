@@ -1,0 +1,6 @@
+{
+  "phase": "terminal",
+  "error": "RuntimeError: Persistent mismatch not established",
+  "utc": "2026-10-25T14:58:16.284105+00:00",
+  "no_retry": true
+}

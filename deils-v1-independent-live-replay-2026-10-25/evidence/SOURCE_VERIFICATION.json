@@ -1,0 +1,25 @@
+{
+  "sources": [
+    {
+      "source": "deils-live-negative-prep-20261025",
+      "manifest_entries": 278,
+      "manifest_sha256": "bfebae2a52e44253f54e4da88b235bbf373ef24b9652e263fe8f9523611b93d3"
+    },
+    {
+      "source": "deils-live-replay-20261025",
+      "manifest_entries": 246,
+      "manifest_sha256": "aa8cfd41f216c11f50d51bcb0058e3ecdf4670b0c617299900e62cb16fe07aca"
+    },
+    {
+      "source": "deils-live-terminal-20261025",
+      "manifest_entries": 273,
+      "manifest_sha256": "8a245755bcaf32f1bb92c26f4c5f2933a519c34dd21a1403e1bdb5716422a887"
+    },
+    {
+      "source": "deils-live-privacy-bind-20261025",
+      "manifest_entries": 281,
+      "manifest_sha256": "3f5ed2545cc3eb72a6869d35efcfb770942b95742e47b18450303c0811f966e5"
+    }
+  ],
+  "total_declared_hashes": 1078
+}
