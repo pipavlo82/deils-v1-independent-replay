@@ -36,7 +36,20 @@ The public offline replay needs no confidential inputs or network access. It ver
 
 Tiago authorized this public destination through Pavlo's publication instructions. Statements such as “LOCAL ONLY / UNPUBLISHED” and “awaiting Tiago” inside the pinned pack describe its earlier packaging state. They remain unchanged as historical evidence; this separate wrapper records the authorized publication.
 
-As reported in Pavlo's publication instructions, **Echo independently confirmed the two-fixture PASS using his own verifier**. This does **not** mean Echo reran Pavlo's 16 local adversarial controls. That later review attribution is separate from the frozen pack, which made no claim of Echo's acceptance. The original review transcript is not part of this package.
+Echo independently checked selected cryptographic and withholding properties of the same two live fixtures using his own implementation, and reviewed Pavlo's reported results. Echo did not independently execute Pavlo's full live replay or the 16 local adversarial controls.
+
+Echo did not verify this package's 141-entry hash manifest or execute its offline replay. His separately implemented checks of selected properties and his review of Pavlo's report are distinct from Pavlo's complete replay. See the [versioned attribution erratum](errata/attribution-v1-2026-10-25.md), which also applies to the historical publication wording at tag `v1.0.0`.
+
+| Evidence activity | Attribution and reproducibility |
+|---|---|
+| Two-fixture live replay | Authored and executed by Pavlo Tvardovskyi. |
+| 16 local adversarial controls | Executed by Pavlo; these were local checks, not production attacks. |
+| 13 public controls | Reproducible offline from the sanitized package without confidential inputs. |
+| Three content-dependent controls | Historical Pavlo results; require private inputs and are `NOT_REPLAYED` in public mode. |
+| Selected cryptographic and withholding properties | Separately checked by Echo using his own implementation; not a full replay. |
+| Review of Pavlo's report | Echo reviewed the reported results; this is not execution of the report's full procedure. |
+
+The original review transcript is not part of this package.
 
 ## Public contract pin
 
